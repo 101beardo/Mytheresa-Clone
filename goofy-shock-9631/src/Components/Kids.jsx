@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image,Box,Container, Button } from '@chakra-ui/react'
+import { Image,Box,Container,Button,Text } from '@chakra-ui/react'
 
 export const Kids = () => {
   return (
@@ -39,10 +39,33 @@ export const Kids = () => {
             </Button>
             </Box>
      </Box>
-     <Box display="flex" justifyContent="center" alignItems="center"  mt="30px" mb="30px">
+     <Box display="flex" justifyContent="center" alignItems="center"  mt="30px">
      <Button color="black" backgroundColor="rgb(223, 223, 223)" direction='row' align='center' padding="1.8%">
                 SHOP KIDS DESIGNERS
             </Button>
+     </Box>
+     <Box w="85%" m="auto" mt="30px" padding="3%">
+        <Box display="flex" justifyContent="center" alignItems="center" fontSize="15px">
+            DESIGNER KIDSWEAR ONLINE AT MYTHERESA KIDS
+        </Box>
+        <Text mt="10px" fontSize="12px">
+            Mytheresa Kids offers the best online edit in designer kidswear with scaled-down versions of all your favorite labels, such as Gucci Kids, Little Marc Jacobs, and Moncler Enfant. Whether you're shopping for a Bonpoint onesie for your baby nephew, investigating the latest trends in boys’ fashion for your son, or want to provide treasure-forever gifts for the children of your friends and family, we offer a vast collection of children's clothes, and a luxury shopping experience that can’t be surpassed.
+        </Text>
+        <Box mt="10px" fontSize="15px">
+            NEW KIDS ON THE BLOCK
+        </Box>
+        <Text mt="10px" fontSize="12px">
+             Start your little ones early on their fashion journey with our edit of personality-packed pieces that make playdates and gatherings a little more colorful. By discovering the latest kids fashion from your favorite designers, you can let them find and develop their own sense of personal style.
+        </Text>
+        <Text mt="10px" fontSize="12px">
+            Our buying team have scoured the globe to bring you the very best runway trends in kidswear. Each item in our curated selection of girls’ fashion, and our unique babies' collections, have been thoughtfully designed and expertly executed. Whether you're dressing your children in Tod’s Junior for a special occasion or fancy them as a miniature influencer in designer shoes from labels like Balenciaga Kids, we've got the designs that will have admirers cooing with appreciation.
+        </Text>
+        <Text mt="10px" fontSize="12px"> 
+            If you want to take inspiration from the adult lines, we also have a selection of iconic styles that allow you to create adorable matching mini-me looks in Balmain blazers, Burberry trench coats, Dolce&Gabbana dresses, or Tod's loafers.
+        </Text>
+        <Text mt="10px" fontSize="12px">
+            Discover more designer must-haves by browsing through Mytheresa and let our Customer Service team assist you with your purchase.
+        </Text>
      </Box>
     </Box>
   )
