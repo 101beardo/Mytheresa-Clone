@@ -1,12 +1,16 @@
+
 import './App.css';
+import MainRoutes from './Pages/MainRoutes';
 
 import {Kids} from "./Components/Kids";
 
 function App() {
   return (
-    <>
-      <Kids />
-    </>
+
+    <div className="App">
+      <MainRoutes/>
+    </div>
+
   );
 }
 
