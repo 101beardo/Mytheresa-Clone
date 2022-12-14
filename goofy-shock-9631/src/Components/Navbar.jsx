@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, Link, useDisclosure,Button, Collapse, Icon, Image } from '@chakra-ui/react'
+import { Box, Link, useDisclosure,Button, Collapse, Icon, Image, Input } from '@chakra-ui/react'
 import {GiHamburgerMenu} from "react-icons/gi"
 import {CgClose} from "react-icons/cg"
+
 
 
 
@@ -11,34 +12,37 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-   <Box mb="180px"  align="center" >
+   <Box mb="50px"  align="center" >
       <Box 
+          mb="40px"
           w="100%" 
           h="70px" 
           p="20px"
-          display={["none","flex","flex"]}
+          display={["none","none","flex"]}
+          justifyContent="space-between"
         //   position={"fixed"}
           zIndex={1}
           >
-          <Box  w="30%" display="flex" justifyContent="space-evenly" >
+          <Box  w="25%" display="flex" justifyContent="space-evenly" >
                 <Link style={{ textDecoration: 'none' }}  href="#">WOMEN</Link>
-                <Link style={{ textDecoration: 'none' }}  href="#">MEN</Link>
+                <Link style={{ textDecoration: 'none' }}  href="#mens">MEN</Link>
                 <Link style={{ textDecoration: 'none' }}  href="#">KIDS</Link>
                 <Link style={{ textDecoration: 'none' }}  href="#">LIFE</Link>
           </Box>
-          <Box w="70%" display="flex" justifyContent="space-evenly"  >
-                <Link style={{ textDecoration: 'none' }}  href='#header'>Signup for Newsletter</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#header'>My account</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#header'>My wishlist</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#header'>Malaysia | English</Link>
+          
+          <Box color="gray" fontSize={['12px']} fontWeight="bold" w="40%" display="flex" justifyContent="space-evenly"  >
+                <Link style={{ textDecoration: 'none' }}  href='#r'>Signup for Newsletter</Link>
+                <Link style={{ textDecoration: 'none' }}  href='#'>My account</Link>
+                <Link style={{ textDecoration: 'none' }}  href='#'>My wishlist</Link>
+                <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link>
           </Box> 
       </Box>
 
       <Box w="100%" 
           h="70px" 
           p="20px"
-          display={["flex","none","none"]}
-          position={"fixed"}
+          display={["flex","flex","none"]}
+          // position={"fixed"}
           fontSize='20px'
           zIndex={1}
           align="right">
@@ -70,7 +74,11 @@ const Navbar = () => {
                     </Box>
           
         </Box>
-      <Image  border="1px solid red" w="23%" src='https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20221130T110112'/>
+      <Image  mt="30px"  w="22%" src='https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20221130T110112'/>
+      
+      <Box>
+
+      </Box>
    </Box>
   )
 }
