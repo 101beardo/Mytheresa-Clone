@@ -41,14 +41,17 @@ function WomenPage() {
                           </Box>
                       </Box>
                         {/* //---------------------------- */}
-
-                          
-                           <Box h="400px"
+                        <Container>
+                          <Text>jkdfbdfgd</Text>
+                          <Text>dfgdfg</Text>
+                          <Text>dfgdgdfd</Text>
+                          <Button></Button>
+                        <Box h="400px"
                               bgImage="url('https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_WW_HP_DESK_BIG_2x_20221213114037.jpg?imwidth=1180&imdensity=1')"
                               bgPosition="center"
                               bgRepeat="no-repeat"
                            />
-                        
+                        </Container>
                           
                        
         </>     
