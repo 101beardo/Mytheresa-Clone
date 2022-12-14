@@ -11,7 +11,7 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-   <Box mb="200px"  align="center" >
+   <Box mb="180px"  align="center" >
       <Box 
           w="100%" 
           h="70px" 
