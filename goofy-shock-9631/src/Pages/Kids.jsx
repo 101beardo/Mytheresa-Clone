@@ -3,7 +3,7 @@ import { Image,Box,Container,Button,Text } from '@chakra-ui/react'
 
 export const Kids = () => {
   return (
-    <Box >
+    <Box id="kids" >
     <Box display="flex" padding="0 5%" gap="1%" mt="30px">
         <Box display="flex" justifyContent="center" alignItems="center"m="auto" boxSize='44%'>
         <Image w="100%" src='https://img.mytheresa.com/media/static/raw/cms/l/KW_FO_2022_December/Kids_Homepage_Festive_BigSplit_GIRL_DSK_2x_20221130170827.jpg?imwidth=1180&imdensity=1' alt='image 1' />

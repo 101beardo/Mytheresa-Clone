@@ -2,7 +2,7 @@
 import './App.css';
 import MainRoutes from './Pages/MainRoutes';
 
-import {Kids} from "./Components/Kids";
+import {Kids} from "./Pages/Kids";
 
 function App() {
   return (

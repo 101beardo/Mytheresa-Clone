@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Link, useDisclosure,Button, Collapse, Icon, Image, Input } from '@chakra-ui/react'
 import {GiHamburgerMenu} from "react-icons/gi"
 import {CgClose} from "react-icons/cg"
+import { useNavigate } from 'react-router'
 
 
 
@@ -10,6 +11,7 @@ const Navbar = () => {
      // border="1px solid red"
 
   const { isOpen, onToggle } = useDisclosure()
+  const navigate=useNavigate()
 
   return (
    <Box mb="50px"  align="center" >
@@ -25,8 +27,8 @@ const Navbar = () => {
           >
           <Box  w="25%" display="flex" justifyContent="space-evenly" >
                 <Link style={{ textDecoration: 'none' }}  href="#">WOMEN</Link>
-                <Link style={{ textDecoration: 'none' }}  href="#mens">MEN</Link>
-                <Link style={{ textDecoration: 'none' }}  href="#">KIDS</Link>
+                <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/mens`)}}>MEN</Link>
+                <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/kids`)}} >KIDS</Link>
                 <Link style={{ textDecoration: 'none' }}  href="#">LIFE</Link>
           </Box>
           
@@ -62,11 +64,11 @@ const Navbar = () => {
                                     align="center"
                                     >
               
-                                    <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}  href='#r'>WOMEN</Link>
+                                    <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}  href='#'>WOMEN</Link>
             
-                                    <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}  href="#">MEN</Link>
+                                    <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}  href="#men">MEN</Link>
               
-                                    <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}   href="#">KIDS</Link>
+                                    <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}   href="#kids">KIDS</Link>
               
                                     <Link m="10px" style={{ textDecoration: 'none' }} onClick={onToggle}   href="#">LIFE</Link> 
                                 </Box>
