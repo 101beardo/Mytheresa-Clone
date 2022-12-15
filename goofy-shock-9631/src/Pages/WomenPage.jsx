@@ -4,7 +4,7 @@ import './WomenPage.css'
 function WomenPage() {
   return (
           <>
-            <Box
+          <Box
             className='img1'>
             <Image 
              className='img1-1'
@@ -15,8 +15,8 @@ function WomenPage() {
           {/* img2---------------- */}
                <Container>
                     <Box 
-                     className='img2'
-                     bgImage="url('https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_WW_HP_DESK_BIG_2x_20221213114037.jpg?imwidth=1180&imdensity=1')">
+                       className='img2'
+                       bgImage="url('https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_WW_HP_DESK_BIG_2x_20221213114037.jpg?imwidth=1180&imdensity=1')">
                       <Box className='text1'>YOUR NEW OUTLOOK</Box>
                       <Box className='text2'>Cruise 2023</Box>
                       <Button className='button2'>SHOP NOW</Button>
@@ -117,6 +117,8 @@ function WomenPage() {
           </Box>
         </Box>
         <hr className='hr1'/>
+
+{/* --------------------------------------------------------------------------------------------------- */}
         
         </>     
   )
