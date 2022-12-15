@@ -2,9 +2,9 @@
 import './App.css';
 import MainRoutes from './Pages/MainRoutes';
 
-import {Kids} from "./Pages/Kids";
 
-function App() {
+
+function App(){
   return (
 
     <div className="App">
