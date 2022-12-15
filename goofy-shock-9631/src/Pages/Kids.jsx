@@ -1,9 +1,38 @@
 import React from 'react'
-import { Image,Box,Container,Button,Text } from '@chakra-ui/react'
+import { Image,Box,Container,Button,Text,Input,InputGroup,Tooltip } from '@chakra-ui/react'
 
 export const Kids = () => {
   return (
-    <Box id="kids" >
+    <Box id="kids">
+    <Box id="kidsNavbar" display="flex" gap="12%" m="auto" >
+    <Box display="flex"
+        gap="25px"
+        justifyContent="center" 
+        alignItems="center"
+        fontSize="13px"
+        font-weight="400"
+        text-transform="uppercase"
+        ml="10%"
+       //  border="1px solid teal"
+        >
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>NEW ARRIVALS</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>DESIGNERS</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>GIRLS</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>BOYS</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>BABY</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>SHOES</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>WINTER SHOP</Text>
+       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>FESTIVE SEASON</Text>
+       <Text color="red" _hover={{opacity:"0.5", cursor: "pointer"}}>SALE</Text>
+   </Box>
+   <Box>
+     <Input placeholder='Search for...' w="100%" border="2px solid black"/>
+     {/* <Tooltip hasArrow label='Search places' bg='gray.300' color='black'>
+      <SearchIcon />
+   </Tooltip> */}
+   </Box>   
+  </Box>
+    <Box id="kids_page">
     <Box display="flex" padding="0 5%" gap="1%" mt="30px">
         <Box display="flex" justifyContent="center" alignItems="center"m="auto" boxSize='44%'>
         <Image w="100%" src='https://img.mytheresa.com/media/static/raw/cms/l/KW_FO_2022_December/Kids_Homepage_Festive_BigSplit_GIRL_DSK_2x_20221130170827.jpg?imwidth=1180&imdensity=1' alt='image 1' />
@@ -68,6 +97,7 @@ export const Kids = () => {
         </Text>
      </Box>
     </Box>
+</Box>
   )
 }
 
