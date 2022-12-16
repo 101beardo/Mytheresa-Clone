@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import { Kids } from './Kids'
 import Life from './Life'
@@ -15,6 +16,7 @@ const MainRoutes = () => {
         <Route path='/womens' element={<WomenPage/>}/>
         <Route path='/life' element={<Life />}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }
