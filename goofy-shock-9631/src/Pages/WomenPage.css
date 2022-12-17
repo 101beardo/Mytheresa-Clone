@@ -1,3 +1,5 @@
+
+
 #box1{
     display: flex;
     justify-content: space-between;
@@ -83,6 +85,7 @@
     
     text-transform: uppercase;
     font-size: 11px;
+
     /* text-align: -webkit-match-parent; */
  
   
@@ -111,7 +114,8 @@
     border: 1px solid #757575;
     font-size: 13px;
     justify-content: center;
-    margin: -100px 30px 0px 850px;
+    /* margin: -100px 30px 0px 850px; */
+    margin-left: 500px;
     border: 1px solid #dfdfdf !important;
     height: 30px !important;
     /* display: block !important; */
@@ -171,6 +175,7 @@
   #navbar{
       background-color: white;
       cursor: pointer;
+    
       
   }
 
@@ -289,7 +294,8 @@ margin: auto;
   
 }
   .dropbtn{
-      color: #757575;
+      color:red;
+      
   }
 
   

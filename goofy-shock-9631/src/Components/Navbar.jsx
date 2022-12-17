@@ -35,7 +35,7 @@ const Navbar = () => {
           <Box color="gray" fontSize={['12px']} fontWeight="bold" w="40%" display="flex" justifyContent="space-evenly"  >
                 <Link style={{ textDecoration: 'none' }}  href='#r'>Signup for Newsletter</Link>
                 <Link style={{ textDecoration: 'none' }}  href='#'>My account</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#'>My wishlist</Link>
+                <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/wishlist`)}}>My wishlist</Link>
                 <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link>
           </Box> 
       </Box>
