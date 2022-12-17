@@ -2,12 +2,15 @@ import { SearchIcon } from '@chakra-ui/icons'
 import { Box, Button, Container, Image, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 
 
 const Mens = () => {
+  const navigate=useNavigate
   return (
     // border="1px solid red"
     <Box  mb="10px" align="center">
@@ -23,7 +26,7 @@ const Mens = () => {
           
           >
           <Box  w="59%" display="flex" justifyContent="space-evenly" >
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">NEW ARRIVALS</Link>
+                <Link color="gray" style={{ textDecoration: 'none' }}   onClick={()=>{navigate(`/sidebar`)}}>NEW ARRIVALS</Link>
                 <Link color="gray" style={{ textDecoration: 'none' }}  href="#mens">DESIGNERS</Link>
                 <Link color="gray" style={{ textDecoration: 'none' }}  href="#">CLOTHING</Link>
                 <Link color="gray" style={{ textDecoration: 'none' }}  href="#">SHOES</Link>

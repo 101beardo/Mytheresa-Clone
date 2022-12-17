@@ -7,6 +7,7 @@ import Life from './Life'
 import Mens from './Mens'
 import Wishlist from './Wishlist'
 import WomenPage from './WomenPage'
+// import Sidebar from './Sidebar';
 const MainRoutes = () => {
   return (
     <div>
@@ -17,7 +18,8 @@ const MainRoutes = () => {
         <Route path='/womens' element={<WomenPage/>}/>
         <Route path='/life' element={<Life />}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
-      </Routes>
+        {/* <Route path='/sidebar' element={<Sidebar/>}/> */}
+     </Routes>
       <Footer/>
     </div>
   )
