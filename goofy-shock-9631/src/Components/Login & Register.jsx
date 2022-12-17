@@ -4,6 +4,7 @@ import { Box, Text, Input, Button, Checkbox,Select} from '@chakra-ui/react'
 const LoginRegister = () => {
   return (
     <Box display={["block","flex","flex"]}>
+        
         {/* Register */}
             <Box w={["null","null","50%"]} padding="5%" id="Register">
                 <Text fontSize="16.38px" opacity="0.8"> CREATE AN ACCOUNT</Text>
@@ -25,6 +26,7 @@ const LoginRegister = () => {
                 <Text mt="15px" opacity="0.8">* required fields</Text>
                 <Button mt="25px" padding="15px">REGISTER</Button>
             </Box>
+
         {/* Login */}
         <Box w={["null","null","50%"]} padding="5%" id="login">
             <Text fontSize="16.38px" opacity="0.8"> ALREADY REGISTERED?</Text>
