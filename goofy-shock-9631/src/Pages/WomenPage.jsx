@@ -1,7 +1,26 @@
-import { Box,Button,Heading,Image,Link,Text } from '@chakra-ui/react'
-import React from 'react';
+import { Box,Button,Heading,Image,Input,Link,Text } from '@chakra-ui/react'
+import {useState,useEffect} from 'react';
+import { SearchIcon } from '@chakra-ui/icons'
+import axios from 'axios'
+//import data from '../../db.json';
 import './WomenPage.css'
+
 function WomenPage() {
+  const [value,setValue]=useState('')
+  const [data,setData]=useState([])
+  
+  useEffect(()=>{
+    axios.get('http://localhost:3000/mens').then((res)=>setData(res.data))
+
+  },[])
+  console.log(data);
+ const onChange=(e)=>{
+    setValue(e.target.value);
+ }
+ const onSearch=(searchTerm)=>{
+    setValue(searchTerm)
+   console.log('search',searchTerm)
+ }
   return <>
         
   {/* -----------------------navbar----------------------------------------- */}
@@ -19,7 +38,7 @@ function WomenPage() {
         <Box className="row">
           <Box className="column">
            
-            <Link id="box31" href="#">   Current Week</Link>
+            <Link id="box31" href="#">Current Week</Link>
             <Link id="box31" href="#">Previous Weeks</Link>
             <Link id="box31" href="#">Essentials</Link>
             <Link id="box31" href="#">Tailoring Edit</Link>
@@ -273,7 +292,12 @@ function WomenPage() {
   </Box>
   {/* <!-- 7th start --> */}
   <Box className="dropdown">
-  <Button className="dropbtn" id="box31">SALE
+  <Button 
+  // className="dropbtn" 
+  _hover={{ bg:'white'}}
+  id="box31"
+  color='red'
+  >SALE
   </Button>
   <Box className="dropdown-content">
   <Box className="header">
@@ -293,9 +317,60 @@ function WomenPage() {
               {/* <!-- <Box></Box> --> */}
   </Box>
   </Box>
-  <Box id="box32">
-  <input type="text" id="input"  placeholder="Search for....  "  />
+  {/* <Box id='box32' fontSize={['12px']} mr="60px" p="10px"  w="18%" display="flex" justifyContent="right" alignItems="center" border="1px solid lightgray" >
+                <SearchIcon boxSize="18px" pos="absolute"/>
+                <Input id="input" variant='unstyled'  placeholder='Search for...'/>    
+                </Box> */}
+  <Box id="box32"
+  border='px solid red'
+  align='right'>
+  
+  <Input 
+  value={value} 
+  type="text" 
+  onChange={onChange} 
+  borderRadius='0px' 
+  id="input"  
+  placeholder="Search for....  "  />
+  <Button onClick={()=>onSearch(value)}><SearchIcon boxSize="18px" /></Button>
   </Box>
+  <Box className='dropdown'
+        bgColor='white'
+        // border="1px solid red"
+        display="flex"
+        flexDirection="column"
+         border="1px solid gray"
+        position='absolute'
+        zIndex={9}
+       
+        >
+        <Box>
+          {data.filter(item=>{
+            const searchTerm=value.toLowerCase();
+            const fullname=item.ph1.toLowerCase();
+            return searchTerm && fullname.startsWith(searchTerm) &&
+            fullname!==searchTerm
+          }).slice(0,5)
+          .map((item)=>(
+            (
+              <Box  
+              onClick={()=>onSearch(item.name)} 
+              className='dropdown-row' 
+              cursor='pointer'
+              textAlign='start'
+              margin="2px 0"
+              key={item.price}>
+                {item.ph1}
+               <Box display='flex'
+               justifyContent="space-between">
+                <Image width="10%" src={item.lazyloaded}/>
+               </Box>
+              </Box>
+              )
+          ))}
+        </Box>
+        </Box>
+
   </Box>
   <hr id="line"/>
 {/* ------------------------------------------------------------------------------- */}
@@ -807,7 +882,7 @@ function WomenPage() {
     {/* ---------------------------------last section--------------------------------------------- */}
           <Box
           w='90%'
-          bgColor='#f6f6f6'
+          // bgColor='#f6f6f6'
           borderTop= '1px solid #dad8d8'
           borderBottom='1px solid #dad8d8'
           margin='auto'
