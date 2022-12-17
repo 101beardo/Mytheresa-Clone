@@ -10,7 +10,7 @@ import React from 'react'
 const Mens = () => {
   return (
     // border="1px solid red"
-    <Box id='mens' mb="10px" align="center">
+    <Box  mb="10px" align="center">
       <Box 
           mb="6px"
           w="100%" 
