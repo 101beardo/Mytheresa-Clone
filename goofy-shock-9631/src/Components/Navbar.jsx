@@ -25,7 +25,7 @@ const Navbar = () => {
         //   position={"fixed"}
           zIndex={1}
           >
-          <Box  w="25%" display="flex" justifyContent="space-evenly" >
+          <Box w="25%" display="flex" justifyContent="space-evenly" >
                 <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/womens`)}}>WOMEN</Link>
                 <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/mens`)}}>MEN</Link>
                 <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/kids`)}} >KIDS</Link>
