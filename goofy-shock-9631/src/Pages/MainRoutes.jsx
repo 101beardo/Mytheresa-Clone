@@ -6,12 +6,14 @@ import { Kids } from './Kids'
 import Life from './Life'
 import Mens from './Mens'
 import Wishlist from './Wishlist'
+// import Dropdown from '../Components/Dropdown'
 import WomenPage from './WomenPage'
 // import Sidebar from './Sidebar';
 const MainRoutes = () => {
   return (
     <div>
      <Navbar/>
+     {/* <Dropdown/> */}
       <Routes>
         <Route path='/mens' element={<Mens/>}/>
         <Route path='/kids' element={<Kids/>}/>
