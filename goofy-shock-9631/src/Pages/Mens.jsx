@@ -1,17 +1,20 @@
-import { SearchIcon } from '@chakra-ui/icons'
+
 import { Box, Button, Container, Image, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react'
-import { Input } from '@chakra-ui/react'
+
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 
 
 const Mens = () => {
+  const navigate=useNavigate
   return (
     // border="1px solid red"
     <Box  mb="10px" align="center">
-      <Box 
+      {/* <Box 
           mb="6px"
           w="100%" 
           h="70px" 
@@ -23,7 +26,7 @@ const Mens = () => {
           
           >
           <Box  w="59%" display="flex" justifyContent="space-evenly" >
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">NEW ARRIVALS</Link>
+                <Link color="gray" style={{ textDecoration: 'none' }}   onClick={()=>{navigate(`/sidebar`)}}>NEW ARRIVALS</Link>
                 <Link color="gray" style={{ textDecoration: 'none' }}  href="#mens">DESIGNERS</Link>
                 <Link color="gray" style={{ textDecoration: 'none' }}  href="#">CLOTHING</Link>
                 <Link color="gray" style={{ textDecoration: 'none' }}  href="#">SHOES</Link>
@@ -40,7 +43,7 @@ const Mens = () => {
                 </Box>
            
       </Box>
-      <hr />
+      <hr /> */}
         <Box w={["90%"]} display="flex" justifyContent="center" alignItems="center" m="auto" mt="30px">
         <Image w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_HP_2022_CW50/BIG1_NEW/DESKTOP_2X_20221213142316.jpg?imwidth=1180&imdensity=1"/>
             <Box position="absolute"  color="white" >

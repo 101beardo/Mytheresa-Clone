@@ -1,898 +1,102 @@
-import { Box,Button,Heading,Image,Input,Link,Text } from '@chakra-ui/react'
-import {useState,useEffect} from 'react';
-import { SearchIcon } from '@chakra-ui/icons'
-import axios from 'axios'
-//import data from '../../db.json';
-import './WomenPage.css'
+import { Box,Button,Image,Text ,SimpleGrid} from '@chakra-ui/react'
+import React from 'react'
 
 function WomenPage() {
-  const [value,setValue]=useState('')
-  const [data,setData]=useState([])
-  
-  useEffect(()=>{
-    axios.get('http://localhost:3000/mens').then((res)=>setData(res.data))
-
-  },[])
-  console.log(data);
- const onChange=(e)=>{
-    setValue(e.target.value);
- }
- const onSearch=(searchTerm)=>{
-    setValue(searchTerm)
-   console.log('search',searchTerm)
- }
-  return <>
-        
-  {/* -----------------------navbar----------------------------------------- */}
-  
-  <Box className="navbar">
-    <Box className="dropdown">
-      <Button className="dropbtn" id="box31">NEW ARRIVALS
-     
-      </Button>
-      <Box className="dropdown-content">
-        <Box className="header">
-          <Heading as='h2'  id="box31">SHOP BY CATEGORY</Heading>
-          <Heading as='h2'  id="box31">JUST IN</Heading>
-        </Box>
-        <Box className="row">
-          <Box className="column">
-           
-            <Link id="box31" href="#">Current Week</Link>
-            <Link id="box31" href="#">Previous Weeks</Link>
-            <Link id="box31" href="#">Essentials</Link>
-            <Link id="box31" href="#">Tailoring Edit</Link>
-            <Link id="box31" href="#">Dress Code</Link>
-            <Link id="box31" href="#">Summer Wardrobe</Link>
-            <Link id="box31" href="#">Outdoor & Activewear</Link>
-            <Link id="box31" href="#">The Gift Shop</Link>
-         
-          </Box>
-          <Box className="column">
-         
-            <Link id="box31" href="#">Clothing</Link>
-            <Link id="box31" href="#">Shoes</Link>
-            <Link id="box31" href="#">Bags</Link>
-            <Link id="box31" href="#">Accessories</Link>
-          </Box>
-       
-          <Box className="column">
-            <img id="colimg" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_FLYOUT_CW17_2022/NA_FLYOUT-_19__20220428121816.jpg" alt=""/>
-          </Box>
-        </Box>
-                        {/* <!-- <Box></Box> --> */}
-      </Box>
-    </Box>
-    {/* <!-- 2nd --> */}
-    <Box className="dropdown">
-      <Button className="dropbtn" id="box31">DESIGNERS 
-     
-      </Button>
-      <Box className="dropdown-content">
-        <Box className="header2">
-          <Heading as='h2'  id="box31">TOP 20</Heading>
-          <Heading as='h2'  id="box31">SHOP BY CATEGORY</Heading>
-        </Box>
-        <Box className="row">
-          <Box className="column">
-           
-            <Link id="box31" href="#">  Acne Studios</Link>
-            <Link id="box31" href="#"> Alexander McQueen</Link>
-            <Link id="box31" href="#">  Ami Paris</Link>
-            <Link id="box31" href="#">   AMIRI</Link>
-            <Link id="box31" href="#"> Balenciaga</Link>
-            <Link id="box31" href="#"> Bottega Veneta</Link>
-            <Link id="box31" href="#">Brunello Cucinelli</Link>
-            <Link id="box31" href="#"> Burberry</Link>
-            {/* <Link id="box31" href="#">  Christian Louboutin</Link>
-            <Link id="box31" href="#">     Dolce&Gabbana </Link> */}
-           
-          
-         
-          </Box>
-          <Box className="column">
-         
-            <Link id="box31" href="#">   Givenchy</Link>
-            <Link id="box31" href="#">  Gucci</Link>
-            <Link id="box31" href="#">  Lemaire</Link>
-            <Link id="box31" href="#">Loewe</Link>
-            <Link id="box31" href="#">Loro Piana</Link>
-            <Link id="box31" href="#">    Maison Margiela  </Link>
-            <Link id="box31" href="#">  Saint Laurent</Link>
-            <Link id="box31" href="#">  Stone Island</Link>
+  return (
     
-          </Box>
-         
-          <Box className="column">
-         
-           
-            <Link id="box31" href="#">Clothing</Link>
-            <Link id="box31" href="#">Shoes</Link>
-            <Link id="box31" href="#">Bags</Link>
-            <Link id="box31" href="#">Accessories</Link>
-            <Link id="box31" href="#">    Exclusive styles  </Link>
-          </Box>
-         
-        
-         
-          
-          <Box className="column">
-            <img id="colimg2" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_CW18_FLYOUTS/GUCCI_LOVE_FLYOUT_20220502153143.jpg" alt=""/>
-          </Box>
-        </Box>
-                        {/* <!-- <Box></Box> --> */}
+    <Box
+    align="center"
+    >
+      <Box 
+      w="90%"
+      >
+     <Image  mb="30px" w={'100%'} src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/15_Sale/FW21/WW_Sale_Wave50/ONSITE_BANNER_SALE_50_desktop_en_1x_20211119133215.jpg"/>
+     <Box  mt="30px" m="auto" display='flex' justifyContent='center' alignItems="center">
+     <Image mb="30px" w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_WW_HP_DESK_BIG_2x_20221213114037.jpg?imwidth=1180&imdensity=1"/>
+      <Box mt="15%" color="white" position='absolute'>
+        <Text fontSize={['10px','16px','26px']}>YOUR NEW OUTLOOK</Text>
+        <Text fontSize={["16px","26px",'56px']}>Cruise 2023</Text>
+        <Button size={["xs","sm","md"]} marginTop='10px' borderRadius='0px' bgColor="white"color="black" _hover={{bgColor:'white'}}>SHOP NOW {`>>`}</Button>
       </Box>
-    </Box>
-  {/* <!-- 3rd start --> */}
-    
-  <Box className="dropdown">
-  <Button className="dropbtn" id="box31">CLOTHING 
-  </Button>
-  <Box className="dropdown-content">
-  <Box className="header">
-  <Heading as='h2'  id="box31">SHOP BY CATEGORY</Heading>
-  <Heading as='h2'  id="box31">TOP BRANDS</Heading>
-  <Heading as='h2'  id="box31">DISCOVER</Heading>
-  </Box>
-  <Box className="row">
-  <Box className="column">
-  <Link id="box31" href="clothing.html">Jackets</Link>
-  <Link id="box31" href="#">     Sweats</Link>
-  <Link id="box31" href="#">   Knitwear</Link>
-  <Link id="box31" href="#"> Coats</Link>
-  <Link id="box31" href="#">T-shirts</Link>
-  <Link id="box31" href="#">  Shirts</Link>
-  <Link id="box31" href="#">  Pants</Link>
-  <Link id="box31" href="#"> Polo shirts</Link>
- 
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">   Acne Studios</Link>
-  <Link id="box31" href="#">Alexander McQueen</Link>
-  <Link id="box31" href="#">Ami Paris</Link>
-  <Link id="box31" href="#">Amiri</Link>
-  <Link id="box31" href="#">Balenciaga</Link>
-  <Link id="box31" href="#">Bottega Veneta</Link>
-  <Link id="box31" href="#">Brunello Cucinelli</Link>
-  <Link id="box31" href="#">Burberry</Link>
+      </Box>
+      <Box mb="50px" boxShadow='inner'  p="8px" bgColor="#faf9f8">
+        <Text mt="50px" mb="20px" fontSize={['10px','10px','20px']}>DON'T MISS OUT</Text>
+        <Text mb="25px" fontSize={["13px","20px",'36px']}>New Arrival</Text>
+        <Text mb="25px" fontSize={['10px','10px','20px']}>Stella McCartney, Victoria Beckham, Chloé, Ganni...</Text>
+        <Button mb="25px" borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+      </Box>
 
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">     New clothing arrivals</Link>
-  <Link id="box31" href="#">    Essential clothing</Link>
-  <Link id="box31" href="#">Exclusive clothing</Link>
-  </Box>
-  <Box className="column">
-  <img id="colimg2" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_CW18_FLYOUTS/FLYOUT__20220503115956.jpg" alt=""/>
-  </Box>
-  </Box>
-              {/* <!-- <Box></Box> --> */}
-  </Box>
-  </Box>
-  {/* <!-- 4thstart --> */}
-  <Box className="dropdown">
-  <Button className="dropbtn" id="box31">SHOES 
-  </Button>
-  <Box className="dropdown-content">
-  <Box className="header">
-  <Heading  as='h2' id="box31">SHOP BY CATEGORY</Heading>
-  <Heading  as='h2' id="box31">TOP BRANDS</Heading>
-  <Heading as='h2'  id="box31">DISCOVER</Heading>
-  </Box>
-  <Box className="row">
-  <Box className="column">
-  <Link id="box31" href="#">     Sneakers</Link>
-  <Link id="box31" href="#">  Sandals & slides</Link>
-  <Link id="box31" href="#">  Loafers</Link>
-  <Link id="box31" href="#">Boots</Link>
-  <Link id="box31" href="#"> Formal shoes</Link>
-  <Link id="box31" href="#">    Derby shoes</Link>
-  <Link id="box31" href="#">     Espadrilles</Link>
-  <Link id="box31" href="#"> Summer Shoes</Link>
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">    Alexander McQueen</Link>
-  <Link id="box31" href="#">   Amiri</Link>
-  <Link id="box31" href="#">    Balenciaga</Link>
-  <Link id="box31" href="#"> Bottega Veneta</Link>
-  <Link id="box31" href="#">    Burberry</Link>
-  <Link id="box31" href="#">     Christian Louboutin</Link>
-  <Link id="box31" href="#">       Gucci</Link>
-  <Link id="box31" href="#">    Lanvin</Link>
+     <Box display={["block",'block','flex']}>
+      <Box mx="10px" align="center" w={['100%','100%','50%']}>
+        <Text mb="30px" fontSize={['10px','10px','20px']}>PARIS TEXAS MYTHERESA</Text>
+        <Text mb="30px" fontSize={["13px","20px",'36px']}>The Exclusive Capsule <br/> Collection</Text>
+        <Image mb="30px"  src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/Paris-Texas-ActboxTall_2x_20221212102147.jpg?imwidth=600&imdensity=1"/>
+        <Button mb="30px" borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+      </Box>
+      <Box mx="10px" display='block'>
+      <Box  border="px solid red" align="center" w={["100%","100%","100%"]}>
+      <Text mb="30px" fontSize={['10px','10px','20px']}>SEASONAL FLATS</Text>
+        <Text mb="30px" fontSize={["13px","20px",'36px']}>Because cozy feets are <br/> happy feets</Text>
+        <Image mb="30px" w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_3_2x_20221212110651.jpg?imwidth=600&imdensity=1"/>
+        <Button mb="30px" borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+        </Box>
+        <hr/>
+        <Box mt="23px" border="px solid red" align="center" w={["100%","100%","100%"]}>
+       <Text mb="30px" fontSize={['10px','10px','20px']}>CONTEMPORARY JEWELRY</Text>
+        <Text mb="30px" fontSize={["13px","20px",'36px']}>Craft and style rolled into <br/> one</Text>
+        <Image mb="30px" w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_4_2x_20221212110650.jpg?imwidth=600&imdensity=1"/>
+        <Button mb="30px"  borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+        </Box>
+      </Box>
+     </Box>
+      <hr/>
 
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">    New shoe arrivals</Link>
-  <Link id="box31" href="#">  Essential shoes</Link>
-  <Link id="box31" href="#">    Exclusive shoes</Link>
-  </Box>
-  <Box className="column">
-  <img id="colimg2" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_CW18_FLYOUTS/FLYOUT_2_20220503115955.jpg" alt=""/>
-  </Box>
-  </Box>
-              {/* <!-- <Box></Box> --> */}
-  </Box>
-  </Box>
-  {/* <!-- 5 start --> */}
-  <Box className="dropdown">
-  <Button className="dropbtn" id="box31">BAGS 
-  </Button>
-  <Box className="dropdown-content">
-  <Box className="header">
-  <Heading as='h2'  id="box31">SHOP BY CATEGORY</Heading>
-  <Heading as='h2'  id="box31">JUST IN</Heading>
-  </Box>
-  <Box className="row">
-  <Box className="column">
-  <Link id="box31" href="#">   Current Week</Link>
-  <Link id="box31" href="#">Previous Weeks</Link>
-  <Link id="box31" href="#">Essentials</Link>
-  <Link id="box31" href="#">Tailoring Edit</Link>
-  <Link id="box31" href="#">Dress Code</Link>
-  <Link id="box31" href="#">Summer Wardrobe</Link>
-  <Link id="box31" href="#">Outdoor & Activewear</Link>
-  <Link id="box31" href="#">The Gift Shop</Link>
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">   Clothing</Link>
-  <Link id="box31" href="#">Shoes</Link>
-  <Link id="box31" href="#">Bags</Link>
-  <Link id="box31" href="#">Accessories</Link>
-  </Box>
-  <Box className="column">
-  <img id="colimg" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_CW18_FLYOUTS/FLYOUT_3_20220503115957.jpg" alt=""/>
-  </Box>
-  </Box>
-              {/* <!-- <Box></Box> --> */}
-  </Box>
-  </Box>
-  {/* <!-- 6th start --> */}
-  <Box className="dropdown">
-  <Button className="dropbtn" id="box31">ACCESSORIES 
-  </Button>
-  <Box className="dropdown-content">
-  <Box className="header">
-  <Heading as='h2'  id="box31">SHOP BY CATEGORY</Heading>
-  <Heading as='h2'  id="box31">TOP BRANDS</Heading>
-  <Heading as='h2'  id="box31">DISCOVER</Heading>
-  </Box>
-  <Box className="row">
-  <Box className="column">
-  <Link id="box31" href="#">     Sneakers</Link>
-  <Link id="box31" href="#">  Sandals & slides</Link>
-  <Link id="box31" href="#">  Loafers</Link>
-  <Link id="box31" href="#">Boots</Link>
-  <Link id="box31" href="#"> Formal shoes</Link>
-  <Link id="box31" href="#">    Derby shoes</Link>
-  <Link id="box31" href="#">     Espadrilles</Link>
-  <Link id="box31" href="#"> Summer Shoes</Link>
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">    Alexander McQueen</Link>
-  <Link id="box31" href="#">   Amiri</Link>
-  <Link id="box31" href="#">    Balenciaga</Link>
-  <Link id="box31" href="#"> Bottega Veneta</Link>
-  <Link id="box31" href="#">    Burberry</Link>
-  <Link id="box31" href="#">     Christian Louboutin</Link>
-  <Link id="box31" href="#">       Gucci</Link>
-  <Link id="box31" href="#">    Lanvin</Link>
-  
-  </Box>
-  <Box className="column">
-  <Link id="box31" href="#">    New shoe arrivals</Link>
-  <Link id="box31" href="#">  Essential shoes</Link>
-  <Link id="box31" href="#">    Exclusive shoes</Link>
-  </Box>
-  <Box className="column">
-  <img id="colimg2" src="https://img.mytheresa.com/media/static/raw/cms/l/MW_CW18_FLYOUTS/FLYOUT_4_20220503115956.jpg" alt=""/>
-  </Box>
-  </Box>
-              {/* <!-- <Box></Box> --> */}
-  </Box>
-  </Box>
-  {/* <!-- 7th start --> */}
-  <Box className="dropdown">
-  <Button 
-  // className="dropbtn" 
-  _hover={{ bg:'white'}}
-  id="box31"
-  color='red'
-  >SALE
-  </Button>
-  <Box className="dropdown-content">
-  <Box className="header">
-  <Heading as='h2'  id="box31">SHOP BY CATEGORY</Heading>
-  {/* <!-- <Heading id="box31">JUST IN</Heading> --> */}
-  </Box>
-  <Box className="row">
-  <Box className="column">
-  </Box>
-  <Box className="column">
-  </Box>
-  <Box className="column">
-  <Heading as='h1'id="sale">SALE</Heading>
-  <Button className="bsale">SHOP SALE</Button>
-  </Box>
-  </Box>
-              {/* <!-- <Box></Box> --> */}
-  </Box>
-  </Box>
-  {/* <Box id='box32' fontSize={['12px']} mr="60px" p="10px"  w="18%" display="flex" justifyContent="right" alignItems="center" border="1px solid lightgray" >
-                <SearchIcon boxSize="18px" pos="absolute"/>
-                <Input id="input" variant='unstyled'  placeholder='Search for...'/>    
-                </Box> */}
-  <Box id="box32"
-  border='px solid red'
-  align='right'>
-  
-  <Input 
-  value={value} 
-  type="text" 
-  onChange={onChange} 
-  borderRadius='0px' 
-  id="input"  
-  placeholder="Search for....  "  />
-  <Button onClick={()=>onSearch(value)}><SearchIcon boxSize="18px" /></Button>
-  </Box>
-  <Box className='dropdown'
-        bgColor='white'
-        // border="1px solid red"
-        display="flex"
-        flexDirection="column"
-         border="1px solid gray"
-        position='absolute'
-        zIndex={9}
+      <Box mt="23px" display={["block",'block','flex']}>
+      
+      <Box  mx="10px" display='block'>
+      <Box  border="px solid red" align="center" w={["100%","100%","100%"]}>
+      <Text mt="20px"  mb="30px"  fontSize={['10px','10px','20px']}>WHAT'S THE ANGLE?</Text>
+        <Text mb="30px" fontSize={["13px","20px",'36px']}>Sharpen Your Edit of <br/>Winter-Sun Shades</Text>
+        <Image mb="30px" w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_1_2x_20221212110608.jpg?imwidth=600&imdensity=1"/>
+        <Button mb="30px" borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+        </Box>
+        <hr/>
+        <Box mt="23px" border="px solid red" align="center" w={["100%","100%","100%"]}>
+       <Text mt="20px" mb="30px" fontSize={['10px','10px','20px']}>YOUR NEW FLEX</Text>
+        <Text mb="30px" fontSize={["13px","20px",'36px']}>The Antigona stretch bag <br/>from Givenchy</Text>
+        <Image mb="30px" w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_2_2x_20221212110608.jpg?imwidth=600&imdensity=1"/>
+        <Button mb="30px"  borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+        </Box>
+      </Box>
+      <Box mx="10px" align="center" w={['100%','100%','50%']}>
+        <Text mt="20px" mb="30px" fontSize={['10px','10px','20px']}>GLAMAROUS GOWNS</Text>
+        <Text mb="30px" fontSize={["13px","20px",'36px']}>Designed to make a<br/> Statement</Text>
+        <Image mb="30px"  src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_ActboxTall_2_2x_20221213120617.jpg?imwidth=600&imdensity=1"/>
+        <Button mb="30px" borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+      </Box>
+     </Box>
+      <hr/>
+      <SimpleGrid mb="30px" columns={[2,2,4]} spacing='20px'>
+        <Box><Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_1_2x_20221212102029.jpg"/>Self-Portrait</Box>
+        <Box><Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_2_2x_20221212102030.jpg"/>Gucci</Box>
+        <Box><Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_3_2x_20221212102029.jpg"/>Valentino</Box>
+        <Box><Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_4_2x_20221212102028.jpg"/>Oscar de la Renta</Box>
        
-        >
-        <Box>
-          {data.filter(item=>{
-            const searchTerm=value.toLowerCase();
-            const fullname=item.ph1.toLowerCase();
-            return searchTerm && fullname.startsWith(searchTerm) &&
-            fullname!==searchTerm
-          }).slice(0,5)
-          .map((item)=>(
-            (
-              <Box  
-              onClick={()=>onSearch(item.name)} 
-              className='dropdown-row' 
-              cursor='pointer'
-              textAlign='start'
-              margin="2px 0"
-              key={item.price}>
-                {item.ph1}
-               <Box display='flex'
-               justifyContent="space-between">
-                <Image width="10%" src={item.lazyloaded}/>
-               </Box>
-              </Box>
-              )
-          ))}
-        </Box>
-        </Box>
+      </SimpleGrid>
+      <Button mb="30px" borderRadius='0px' bgColor="black" color="white" _hover={{bgColor:"black"}}>SHOP NOW {`>>`}</Button>
+     <hr/>
 
-  </Box>
-  <hr id="line"/>
-{/* ------------------------------------------------------------------------------- */}
-          <Box
-            id='img1'
-            width='90%'
-            height='auto'
-            margin='auto'
-            marginTop='50px'
-            >
-            <Image 
-             width='100%'
-            //  className='img1-1'
-             
-              src='https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/15_Sale/FW21/WW_Sale_Wave50/ONSITE_BANNER_SALE_50_desktop_en_1x_20211119133215.jpg' alt='shiv'/>
-              </Box>
-    {/* //----------------------------img2------------------------------------- */}
-          {/*---------------------------------- img2---------------- */}
-               <Box>
-                    <Box 
-                       className='img2'
-                      height='750px'
-                      width='90%'
-                      margin='auto'
-                      marginTop=' 30px'
-                      display=' flex'
-                      flexDirection=' column'
-                      justifyContent=' center'
-                      alignItems=' center'
-                      backgroundPosition='center'
-                      backgroundSize='cover'
-                       backgroundRepeat='no-repeat'
-                      rowGap=' 20px'
-                      bgImage="url('https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_WW_HP_DESK_BIG_2x_20221213114037.jpg?imwidth=1180&imdensity=1')">
-                      <Box
-                      //  className='text1'
-                       color='white'
-                       fontSize='26px'
-                       marginTop= '15px'>YOUR NEW OUTLOOK</Box>
-                      <Box
-                         className='text2'
-                         color='white'
-                        fontSize='65px'
-                        >Cruise 2023</Box>
-                      <Button 
-                      // className='button2'
-                      border='none'
-                      borderRadius='0px'
-                      _hover={{ bg:'black'}}
-                      backgroundColor='white'
-                      color='black'
-                      w='11%'
-                      h='40px'
-                      fontSize= '20px'
-                      fontWeight= '400'
-                      letterSpacing= '1px'>SHOP NOW</Button>
-                        </Box>
-                  </Box>
-      {/* -----------------------textcontainer------------------------------- */}
-                          <Box className='textcont'
-                          w= '90%'
-                          bgColor='#f6f6f6'
-                          h='300px'
-                          m= 'auto'
-                          mt= '50px'
-                          borderTop= '1px solid #dad8d8'
-                          borderBottom= '1px solid #dad8d8 '
-                          display= 'flex'
-                          flexDirection= 'column'
-                          justifyContent= 'center'
-                          alignItems= 'center'
-                          rowGap= '20px'
-                          >
-                             <Box 
-                            //  className='textcont-1'
-                             fontSize='22px'>DON'T MISS OUT</Box>
-                             <Box
-                              // className='textcont-2'
-                             fontSize='40px'>New Arrivals</Box>
-                             <Box 
-                            //  className='textcont-3'
-                            fontSize='22px'
-                             >Christian Louboutin, Paris Texas, A.P.C., Victoria Beckham...</Box>
-                             <Box className='textcont-4'>
-                              <Button 
-                              // className='textcont-but'
-                              border='none'
-                              borderRadius="0px"
-                              _hover={{ bg:'black'}}
-                              bgColor='black'
-                              color='white'
-                              h= '40px'
-                              w='120%'
-                              fontSize= '16px'
-                              fontWeight='400'
-                              letterSpacing= '1'>SHOP NOW </Button></Box>
-                          </Box>
-        {/*--------- ---------------bigimg--------------------------------- -------*/}
-        <Box 
-        // className='bigimg'
-        w='90%'
-        border='px solid red'
-        display='flex'
-        h=' 200px'
-        m='auto'
-        mt='50px'
-        justifyContent= 'space-around'
-        >
-          <Box className='bigimg-1'>
-            <Box 
-            // className='bigtext-1'
-            fontSize='24px'
-            textAlign= 'center'
-            >PARIS TEXAS X MYTHERESA</Box>
-            <Box 
-            // className='bigtext-2'
-            textAlign= 'center'
-            fontSize='40px'
-            marginTop= '18px'>The Exclusive Capsule <br/> Collection</Box>
-          </Box>
-          <Box className='bigimg-2'>
-            <Box 
-            // className='bigtext-1'
-            fontSize='24px'
-            textAlign= 'center'>Seasonal Flats</Box>
-            <Box 
-            // className='bigtext-2'
-            textAlign= 'center'
-            fontSize='40px'
-            marginTop= '18px'>Because cozy feet are <br/> happy feet</Box>
-          </Box>
-        </Box>
-        {/*---------------------------------Bigpic------------------------------------------- */}
-            <Box 
-            // className='bigpic'
-            w='90%'
-            h='auto'
-            m='auto'
-            border='px solid red'
-            display ='flex'
-            justifyContent='space-between'
-            columnGap= '30px'
-
-            >
-              <Box 
-              // className='bigpic-1'
-              h='auto'
-              border='px solid red'
-              w= '50%'
-              >
-                <Image 
-                // className='bigimage' 
-                w='100%'
-                src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/Paris-Texas-ActboxTall_2x_20221212102147.jpg?imwidth=600&imdensity=1"/>
-              </Box>
-              <Box 
-              // className='bigpic-2'
-              width='50%'
-              >
-                 <Box className="bigpic-2-1">
-                  <Image className="bigpic-2-img"
-                  w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_3_2x_20221212110651.jpg?imwidth=600&imdensity=1"/>
-                 </Box>
-                 <Box 
-                //  className="bigpic-2-2"
-                 border='px solid red'      
-                 w= '100%'
-                 m='auto'
-                 >
-                
-                  <Box 
-                  // className='bigpic-2-2-buttondiv'
-                  w='20%'
-                  h='40px'
-                  margin= 'auto'
-                  mt= '85px'
-                  >
-                    <Button 
-                    // className='bigpic-2-2-Button'
-                    border='none'
-                    _hover={{ bg:'black'}}
-                    bgColor= 'black'
-                    borderRadius='0px'
-                    color='white'
-                    h= '40px'
-                    w='100%'
-                    fontSize= '13px'
-                    fontWeight= '400'
-                    letterSpacing= '1px'
-                    >SHOP NOW </Button></Box>
-                  <Box 
-                  // className='hr'
-                  marginTop= '100px'
-                  />
-                  <Text 
-                  className='bigpic-2-2-textsmall'
-                  fontSize='24px'
-                  textAlign='center'
-                  >CONTEMPORARY JEWELRY</Text>
-                  <Text 
-                  // className='bigpic-2-2-text'
-                   textAlign= 'center'
-                   fontSize= '40px'
-                   mt= '18px'
-                  >Craft and style rolled into <br/> one</Text>
-                 </Box>
-                 <Box className="bigpic-2-3">
-                  <Image
-                  //  className="bigpic-2-img"
-                  w='100%'
-                   src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_4_2x_20221212110650.jpg?imwidth=600&imdensity=1"/>
-                 </Box>
-              </Box>
-            </Box>
-{/* -----------------------------------twobutton------------------------------------------------- */}
-        
-        <Box 
-        // className='twobutton'
-        w='90%'
-        border='px solid red'
-        m= 'auto'
-        mt= '40px'
-        display= 'flex'
-        justifyContent= 'space-around'
-        
-        >
-          <Box 
-          // className='twobuttondiv
-          border='px solid red'
-         
-          >
-          <Button 
-          // className='twobutton-1'
-          _hover={{ bg:'black'}}
-          border='none'
-          borderRadius='0px'
-          bgColor= 'black;'
-          color='white'
-          h= '40px'
-          w='100%'
-          fontSize ='13px'
-          fontWeight= '400'
-          letterSpacing= '1px'
-          >SHOP NOW</Button>
-          </Box>
-          <Box className='twobuttondiv'>
-           <Button 
-          //  className='twobutton-1'
-          _hover={{ bg:'black'}}
-          borderRadius='0px'
-            border='none'
-            backgroundColor= 'black;'
-            color='white'
-            h= '40px'
-            w='100%'
-            fontSize ='13px'
-            fontWeight= '400'
-            letterSpacing= '1px'
-           >SHOP NOW</Button>
-          </Box>
-        </Box>
-       
-  {/* ------------------------------nextbigdiv------------------------------------------------ */}
-         
-          <Box className='bigimg'
-           width='90%'
-            border='px solid red'
-            display='flex'
-            height=' 200px'
-            margin='auto'
-            marginTop='50px'
-            justifyContent='space-around'
-          >
-          <Box className='bigimg-1'>
-            <Box className='bigtext-1'
-             fontSize='24px'
-             textAlign= 'center'
-            >WHAT'S THE ANGLE?</Box>
-            <Box className='bigtext-2'
-            textAlign= 'center'
-            fontSize='40px'
-            marginTop= '18px'
-            >Sharpen your edit of <br/> winter-sun shades</Box>
-          </Box>
-          <Box className='bigimg-2'>
-            <Box className='bigtext-1'
-            fontSize='24px'
-             textAlign= 'center'
-            >GLAMAROUS GOWNS</Box>
-            <Box className='bigtext-2'
-             textAlign= 'center'
-            fontSize='40px'
-            marginTop= '18px'
-            >Designed to make Link <br/>statement</Box>
-          </Box>
-        </Box>
-        {/*---------------------------------Bigpic------------------------------------------- */}
-            
-            <Box 
-            // className='bigpic'
-            w='90%'
-            h='auto'
-            m='auto'
-            border='px solid red'
-            display ='flex'
-            justifyContent='space-between'
-            columnGap= '30px'
-
-            >
-              
-              <Box 
-              // className='bigpic-2'
-              width='50%'
-              >
-                 <Box className="bigpic-2-1">
-                  <Image className="bigpic-2-img"
-                  w="100%" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_1_2x_20221212110608.jpg?imwidth=600&imdensity=1"/>
-                 </Box>
-                 <Box 
-                //  className="bigpic-2-2"
-                 border='px solid red'      
-                 w= '100%'
-                 m='auto'
-                 >
-                
-                  <Box 
-                  // className='bigpic-2-2-buttondiv'
-                  w='20%'
-                  h='40px'
-                  margin= 'auto'
-                  mt= '85px'
-                  >
-                    <Button 
-                    // className='bigpic-2-2-Button'
-                    border='none'
-                    _hover={{ bg:'black'}}
-                    bgColor= 'black'
-                    borderRadius='0px'
-                    color='white'
-                    h= '40px'
-                    w='100%'
-                    fontSize= '13px'
-                    fontWeight= '400'
-                    letterSpacing= '1px'
-                    >SHOP NOW </Button></Box>
-                  <Box 
-                  // className='hr'
-                  marginTop= '100px'
-                  />
-                  <Text 
-                  className='bigpic-2-2-textsmall'
-                  fontSize='24px'
-                  textAlign='center'
-                  >YOUR NEW FLEX</Text>
-                  <Text 
-                  // className='bigpic-2-2-text'
-                   textAlign= 'center'
-                   fontSize= '40px'
-                   mt= '18px'
-                  >The Antigona Stretch Bag  <br/>from Givenchy</Text>
-                 </Box>
-                 <Box className="bigpic-2-3">
-                  <Image
-                  //  className="bigpic-2-img"
-                  w='100%'
-                   src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/CW50_WW_HP_ActboxSmall_2_2x_20221212110608.jpg?imwidth=600&imdensity=1"/>
-                 </Box>
-              </Box>
-              <Box 
-              // className='bigpic-1'
-              h='auto'
-              border='px solid red'
-              w= '50%'
-              >
-                <Image 
-                // className='bigimage' 
-                w='100%'
-                src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW50/NEW_BIG/CW50_ActboxTall_2_2x_20221213120617.jpg?imwidth=600&imdensity=1"/>
-              </Box>
-            </Box>
-{/* -----------------------------------twobutton------------------------------------------------- */}
-        
-<Box 
-        // className='twobutton'
-        width='90%'
-        border='px solid red'
-        margin= 'auto'
-        marginTop= '40px'
-        display= 'flex'
-        justifyContent= 'space-around'
-        >
-          <Box 
-          // className='twobuttondiv
-          // width='10%'
-          // height='40px'
-          // margin= 'auto'
-          >
-          <Button 
-          // className='twobutton-1'
-          borderRadius='0px'
-          _hover={{ bg:'black'}}
-          border='none'
-          backgroundColor= 'black;'
-          color='white'
-          height= '40px'
-          width='100%'
-          fontSize ='13px'
-          fontWeight= '400'
-          letterSpacing= '1px'
-          >SHOP NOW</Button>
-          </Box>
-          <Box className='twobuttondiv'>
-           <Button 
-          //  className='twobutton-1'
-          borderRadius='0px'
-          _hover={{ bg:'black'}}
-            border='none'
-            backgroundColor= 'black;'
-            color='white'
-            height= '40px'
-            width='100%'
-            fontSize ='13px'
-            fontWeight= '400'
-            letterSpacing= '1px'
-           >SHOP NOW</Button>
-          </Box>
-        </Box>
-       
-
-{/* --------------------------------------------------------------------------------------------------- */}
-                  <Box 
-                  
-                  border='px solid red'
-                  w="90%"
-                  margin='auto'
-                  marginTop='20px'
-                  textAlign='center'>
-                    <Text
-                    textAlign= 'center'
-                    fontSize= '24px'
-                    color="black">
-                      PREP SCHOOL
-                    </Text>
-                    <Box
-                    textAlign= 'center'
-                    marginTop='10px'
-                    fontSize= '40px'
-                    color="black">
-                    Where polished is the guiding<br/> principle
-                    </Box>
-                    
-                  </Box>
-
-
-    {/* ----------------------------fourimages------------------------------------------ */}
-                <Box
-                border="px solid red"
-                width="90%"
-                display="flex"
-                margin='auto'
-                marginTop='20px'
-                gap="30px"
-                color="black"
-                fontSize='24px'
-                textAlign="center"
-                >
-                  <Box>
-                  <Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_1_2x_20221212102029.jpg"/>
-                  <Text>Self-Portrait</Text>
-                  </Box>
-                  <Box>
-                  <Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_2_2x_20221212102030.jpg"  />
-                  <Text>Gucci</Text>
-                  </Box>
-                  <Box>
-                  <Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_3_2x_20221212102029.jpg" />
-                  <Text>Valentino</Text>
-                  </Box>
-                  <Box>
-                  <Image src="https://img.mytheresa.com/media/static/raw/cms/l/LIFE_HP_2022_CW50/CW50_WW_HP_Finest_edit_4_2x_20221212102028.jpg"/>
-                  <Text>Oscar de la Renta</Text>
-                  </Box>
-                </Box>
-        <Box 
-        // className='twobutton'
-        width='90%'
-        border='px solid red'
-        margin= 'auto'
-        marginTop= '40px'
-        display= 'flex'
-        justifyContent= 'space-around'
-        >
-         
-          <Button 
-          // className='twobutton-1'
-          borderRadius='0px'
-          _hover={{ bg:'black'}}
-          border='none'
-          backgroundColor= 'black;'
-          color='white'
-          height= '40px'
-          width='10%'
-          fontSize ='16px'
-          fontWeight= '400'
-          letterSpacing= '1px'
-          >SHOP NOW</Button>
-          
-          </Box>
-    {/* ---------------------------------last section--------------------------------------------- */}
-          <Box
+     <Box
           w='90%'
           // bgColor='#f6f6f6'
-          borderTop= '1px solid #dad8d8'
-          borderBottom='1px solid #dad8d8'
           margin='auto'
-          marginTop='100px'
+          marginTop='50px'
         
           
           >
             <Box>
             <Text
-            fontSize='27px'
+            fontSize='16px'
             color="black"
             textAlign='center'
             >MYTHERESA – WOMEN’S LUXURY AND DESIGNER FASHION</Text>
@@ -912,13 +116,13 @@ function WomenPage() {
             gap="20px"
             border="px solid red"
             width='100%'
-            marginTop='20px'
+            marginTop='10px'
             >
             <Box
             width="45%"
             border="px solid black"
             color="black">
-            <Text fontSize='24px' color="black">A LUXURY SHOPPING EXPERIENCE</Text>
+            <Text fontSize='18px' color="black">A LUXURY SHOPPING EXPERIENCE</Text>
 
               <ul>
                 <li>The finest edit of more than 200 international luxury brands</li>
@@ -966,9 +170,11 @@ function WomenPage() {
           <Text>Shop with us and discover why Mytheresa is your final
              destination for online shopping for women.</Text>
           </Box>
-       
-          </>
-  
+
+
+     </Box>
+</Box>
+  )
 }
 
 export default WomenPage
