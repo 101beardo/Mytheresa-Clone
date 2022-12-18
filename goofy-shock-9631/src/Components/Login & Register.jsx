@@ -3,9 +3,19 @@ import { Box, Text, Input, Button, Checkbox,Select} from '@chakra-ui/react'
 
 const LoginRegister = () => {
   return (
+    <Box id="Login_Register">    
+    <Box
+    border="0px"
+    borderTop="2px"
+    borderColor="gray.200"
+    width="100%"
+    m="auto"
+    mt="35px"
+  ></Box>
     <Box display={["block","flex","flex"]}>
         
         {/* Register */}
+   
             <Box w={["null","null","50%"]} padding="5%" id="Register">
                 <Text fontSize="16.38px" opacity="0.8"> CREATE AN ACCOUNT</Text>
                 <Text mt="10px" fontSize="14px" opacity="0.8"> Please enter the following information to create your account. </Text>
@@ -26,6 +36,14 @@ const LoginRegister = () => {
                 <Text mt="15px" opacity="0.8">* required fields</Text>
                 <Button mt="25px" padding="15px">REGISTER</Button>
             </Box>
+  
+         {/* border */}
+            <Box
+              border="0px"
+              borderTop="2px"
+              borderColor="gray.200"
+              height="100%"
+            ></Box>
 
         {/* Login */}
         <Box w={["null","null","50%"]} padding="5%" id="login">
@@ -39,6 +57,7 @@ const LoginRegister = () => {
             <Text mt="15px" opacity="0.8">At Mytheresa, we keep your information secure. As a result, it will be necessary for you to log in to your account before you are able to place an order or change the information on your account. You will be asked to log in to complete your order even if you have already been greeted on the website.</Text>
         </Box>
     </Box>
+    </Box>  
   )
 }
 

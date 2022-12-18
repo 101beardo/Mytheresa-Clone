@@ -1,10 +1,10 @@
 import React from 'react'
-import { Image,Box,Container,Button,Text,Input,InputGroup,Tooltip } from '@chakra-ui/react'
+import { Image,Box,Container,Button,Text,Input} from '@chakra-ui/react'
 
 export const Kids = () => {
   return (
     <Box id="kids">
-    <Box id="kidsNavbar" display="flex" gap="12%" m="auto" >
+    {/* <Box id="kidsNavbar" display="flex" gap="12%" m="auto" >
     <Box display="flex"
         gap="25px"
         justifyContent="center" 
@@ -13,7 +13,6 @@ export const Kids = () => {
         font-weight="400"
         text-transform="uppercase"
         ml="10%"
-       //  border="1px solid teal"
         >
        <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>NEW ARRIVALS</Text>
        <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>DESIGNERS</Text>
@@ -27,16 +26,21 @@ export const Kids = () => {
    </Box>
    <Box>
      <Input placeholder='Search for...' w="100%" border="2px solid black"/>
-     {/* <Tooltip hasArrow label='Search places' bg='gray.300' color='black'>
-      <SearchIcon />
-   </Tooltip> */}
    </Box>   
-  </Box>
+  </Box> */}
     <Box id="kids_page">
-    <Box display="flex" padding="0 5%" gap="1%" mt="30px">
-        <Box display="flex" justifyContent="center" alignItems="center"m="auto" boxSize='44%'>
+    <Box
+          border="0px"
+          borderTop="2px"
+          borderColor="gray.200"
+          width="100%"
+          m="auto"
+          mt="35px"
+        ></Box>
+    <Box display={["block","flex","flex"]} padding="0 5%" gap="1%" mt="50px">
+        <Box display="flex" justifyContent="center" alignItems="center" m="auto" boxSize={["80%","44%","44%"]} >
         <Image w="100%" src='https://img.mytheresa.com/media/static/raw/cms/l/KW_FO_2022_December/Kids_Homepage_Festive_BigSplit_GIRL_DSK_2x_20221130170827.jpg?imwidth=1180&imdensity=1' alt='image 1' />
-            <Box position="absolute"  color="white" mt="200px">
+            <Box position="absolute"  color="white" mt={["200px", "null", "200px"]}>
             <Container textAlign="center" fontSize={["15px", "20px", "55px"]}>
                 Girls
             </Container>
@@ -45,9 +49,9 @@ export const Kids = () => {
             </Button>
             </Box>
         </Box>
-        <Box display="flex" justifyContent="center" alignItems="center"m="auto" boxSize='44%'>
-         <Image  w="100%" src='https://img.mytheresa.com/media/static/raw/cms/l/KW_FO_2022_December/Kids_Homepage_Festive_BigSplit_BOY_DSK_2x_20221130170825.jpg?imwidth=1180&imdensity=1' alt='image 2' />
-            <Box position="absolute"  color="white" mt="200px">
+        <Box display="flex" justifyContent="center" alignItems="center" m="auto" boxSize={["80%","44%","44%"]} marginTop={["20px","null","0.000000000001px"]}>
+         <Image w="100%" src='https://img.mytheresa.com/media/static/raw/cms/l/KW_FO_2022_December/Kids_Homepage_Festive_BigSplit_BOY_DSK_2x_20221130170825.jpg?imwidth=1180&imdensity=1' alt='image 2' />
+            <Box position="absolute"  color="white" mt={["200px", "null", "200px"]}>
             <Container textAlign="center" fontSize={["15px", "20px", "55px"]}>
                 Boys
             </Container>
@@ -73,7 +77,7 @@ export const Kids = () => {
                 SHOP KIDS DESIGNERS
             </Button>
      </Box>
-     <Box w="85%" m="auto" mt="30px" padding="3%">
+     <Box w="85%" m="auto" mt="30px" padding="3%"  opacity="0.8">
         <Box display="flex" justifyContent="center" alignItems="center" fontSize="15px">
             DESIGNER KIDSWEAR ONLINE AT MYTHERESA KIDS
         </Box>
