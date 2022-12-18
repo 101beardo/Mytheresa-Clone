@@ -2,11 +2,11 @@ import React from 'react'
 import {Box,Heading} from '@chakra-ui/react';
 // import '../Pages/Sidebar.css';
 import '../Pages/Sidebar.css';
-import Dropdown from './Dropdown';
+
 function Sidebar() {
   return (
     <Box className="App">
-        <Dropdown/>
+        
        <Box className="sidebar"
       //  position='fixed'
        width='250px'
