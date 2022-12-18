@@ -539,3 +539,18 @@ float: left;
   text-decoration: none;
   margin-top: 11px !important;
 }
+.dropdowns:empty{
+  border:none;
+ }
+ .search-container{
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .input{
+  width:'220px'
+ }
+ .search-inner{
+  display: flex;
+ }
