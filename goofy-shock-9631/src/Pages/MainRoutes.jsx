@@ -1,7 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Dropdown from '../Components/Dropdown'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+import Admin from './Admin'
 import { Kids } from './Kids'
 import Life from './Life'
 import Mens from './Mens'
@@ -12,7 +14,9 @@ const MainRoutes = () => {
   return (
     <div>
      <Navbar/>
+     <Dropdown/>
       <Routes>
+        <Route path='/admin' element={<Admin/>}/>
         <Route path='/mens' element={<Mens/>}/>
         <Route path='/kids' element={<Kids/>}/>
         <Route path='/womens' element={<WomenPage/>}/>
