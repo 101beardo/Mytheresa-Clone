@@ -9,7 +9,7 @@ body{
     
     letter-spacing: 2px;
     color:#999892;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 30px;
  }
  
@@ -19,7 +19,7 @@ body{
 }
 #sidebarlabel{
   margin-left: 7px;
-  font-size: 18px;
+  font-size: 16px;
    color:#7e7d77
 }
 details>summary{
@@ -27,6 +27,6 @@ details>summary{
   cursor: pointer;
   margin-left: 50px;
   color:black;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
 }
