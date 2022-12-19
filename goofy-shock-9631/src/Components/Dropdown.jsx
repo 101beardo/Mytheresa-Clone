@@ -65,8 +65,7 @@ export default function Navbar() {
                 px={4}
                 borderRadius={5}
                 // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
-                aria-label="Courses"
-                fontWeight="normal"
+                
                 onMouseEnter={onOpen}
                 onMouseLeave={onClose}
             >
