@@ -35,12 +35,127 @@ const Navbar = () => {
           <Box color="gray" fontSize={['12px']} fontWeight="bold" w="40%" display="flex" justifyContent="space-evenly"  >
                 <Link style={{ textDecoration: 'none' }}  href='#r'>Signup for Newsletter</Link>
                 <Link style={{ textDecoration: 'none' }}  href='#'>My account</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#'>My wishlist</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link>
-          </Box> 
-      </Box>
+                <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/wishlist`)}}>My wishlist</Link>
 
-      <Box w="100%" 
+                {/* <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link> */}
+          
+     
+
+
+      
+          <Link style={{ textDecoration: "none" }} onClick={onOpen}>
+            Malaysia | English
+          </Link>
+
+                <Link style={{ textDecoration: "none" }} onClick={onOpen}> Malaysia | English</Link>
+
+
+          <Modal
+            isOpen={isOpen}
+            onClose={onClose}
+            size="xl"
+            borderBottomRadius="0"
+            display={["none", "none", "flex"]}
+          >
+            <ModalOverlay />
+            <ModalContent>
+              <Box bg="#F2F2F2" pb="20px">
+                <ModalHeader
+                  m="auto"
+                  fontWeight="light"
+                  fontSize="md"
+                  textAlign="center"
+                  mb="25px"
+                >
+                  PLEASE CHOOSE THE DESTINATION OF DELIVERY.
+                </ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Box display="flex" gap="5%">
+                    <Box width="30%">
+                      <Text as="h4" fontSize="sm">
+                        YOUR REGION
+                      </Text>
+                      <Select
+                        variant="outline"
+                        placeholder="Asia"
+                        htmlSize={4}
+                        width="auto"
+                        mt="3px"
+                      >
+                        <option>Please choose...</option>
+                        <option>All</option>
+                        <option>Africa</option>
+                        <option>Europe</option>
+                        <option>Latin America</option>
+                        <option>North America</option>
+                        <option>Oceania</option>
+                      </Select>
+                    </Box>
+                    <Box height="80%" width="45%">
+                      <Text as="h4" fontSize="sm">
+                        YOUR DELIVERY DESTINATION
+                      </Text>
+                      <Select
+                        variant="outline"
+                        placeholder="India"
+                        htmlSize={4}
+                        width="auto"
+                        mt="3px"
+                      >
+                        <option>Please choose...</option>
+                        <option>Azerbaijan</option>
+                        <option>Bahrain</option>
+                        <option>Bangladesh</option>
+                        <option>Bhutan</option>
+                        <option>Brunei</option>
+                        <option>China</option>
+                        <option>Georgia</option>
+                        <option>Hong Kong</option>
+                        <option>Indonesia</option>
+                        <option>Israel</option>
+                        <option>Japan</option>
+                        <option>Japan</option>
+                      </Select>
+                    </Box>
+                    <Box height="80%" width="30%">
+                      <Text as="h4" fontSize="sm">
+                        YOUR LANGUAGE
+                      </Text>
+                      <Select
+                        variant="outline"
+                        placeholder="English"
+                        htmlSize={4}
+                        width="auto"
+                        mt="3px"
+                      >
+                        <option>Please choose a language</option>
+                      </Select>
+                    </Box>
+                  </Box>
+                  <Button
+                    color="white"
+                    bg="black"
+                    display="block"
+                    m="auto"
+                    mt="30px"
+                  >
+                    CONTINUE SHOPPING
+                  </Button>
+                </ModalBody>
+              </Box>
+
+              <ModalFooter pb="30px">
+                <Text as="p" textAlign="center">
+                  Please note: the items in your shopping bag may be deleted if
+                  you change your region or your delivery destination.
+                </Text>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+          </Box> 
+        </Box>
+        {/* <Box w="100%" 
           h="70px" 
           p="20px"
           display={["flex","flex","none"]}
@@ -75,11 +190,12 @@ const Navbar = () => {
                             </Collapse>
                     </Box>
           
-        </Box>
+        </Box> */}
       <Image  mt="30px"  w="22%" src='https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20221130T110112'/>
-     
-   </Box>
-  )
-}
+      </Box>
 
-export default Navbar
+  
+  );
+};
+
+export default Navbar;
