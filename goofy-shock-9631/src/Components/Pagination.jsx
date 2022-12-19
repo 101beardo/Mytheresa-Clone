@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { usePagination, DOTS } from './usePagination';
-import './pagination.scss';
+import {Box} from '@chakra-ui/react';
 const Pagination = props => {
   const {
     onPageChange,
@@ -44,7 +44,7 @@ const Pagination = props => {
         })}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+        <Box className="arrow left" />
       </li>
       {paginationRange.map(pageNumber => {
          
@@ -72,7 +72,7 @@ const Pagination = props => {
         })}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        <Box className="arrow right" />
       </li>
     </ul>
   );
