@@ -51,10 +51,13 @@ import {
     MenuButton,
     MenuList,
     useColorModeValue,
+    Link
 } from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
 
 
 export default function Navbar() {
+    const navigate=useNavigate();
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Menu isOpen={isOpen}>
@@ -69,8 +72,8 @@ export default function Navbar() {
                 fontWeight="normal"
                 onMouseEnter={onOpen}
                 onMouseLeave={onClose}
-            >
-                NEW ARRIVALS 
+            > NEW ARRIVALS 
+               
             </MenuButton>
             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
                 <MenuItem>Menu Item 1</MenuItem>

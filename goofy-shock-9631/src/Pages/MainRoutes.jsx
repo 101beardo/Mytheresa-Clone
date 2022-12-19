@@ -15,8 +15,9 @@ const MainRoutes = () => {
      <Navbar/>
      <Dropdown/>
       <Routes>
-        <Route path='/admin' element={<Admin/>}/>
-        <Route path='/mens' element={<Mens/>}/>
+     
+      <Route path='/mens' element={<Mens/>}/>
+      <Route path='/admin' element={<Admin/>}/>
         <Route path='/kids' element={<Kids/>}/>
         <Route path='/womens' element={<WomenPage/>}/>
         <Route path='/life' element={<Life />}/>
