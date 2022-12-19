@@ -71,15 +71,21 @@ export default function Navbar() {
                 aria-label="Courses"
                 fontWeight="normal"
                 onMouseEnter={onOpen}
-                onMouseLeave={onClose}
-            > NEW ARRIVALS 
+                onMouseLeave={onClose}>
+                NEW ARRIVALS
                
             </MenuButton>
             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
                 <MenuItem>Menu Item 1</MenuItem>
                 <MenuItem>Menu Item 2</MenuItem>
                 <MenuItem>Menu Item 3</MenuItem>
+                <MenuItem>Menu Item 1</MenuItem>
+                <MenuItem>Menu Item 2</MenuItem>
+                <MenuItem>Menu Item 3</MenuItem>
             </MenuList>
+            
+            
         </Menu>
+        
     )
 }

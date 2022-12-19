@@ -8,15 +8,11 @@ import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 
 import { useState } from 'react';
-const Items=[1,2,3,4,4,5,5,6,6,7]
-console.log(items);
+
+
 function Arrival() {
-  //const [page,setPage]=useState(1);
-
-
     const dispatch=useDispatch();
-    const our =dispatch(getdata())
-    console.log(our);
+
     const data=useSelector((store)=>store.AppReducer.data);
     console.log('sdkjfb',data);
   useEffect(()=>{
@@ -48,10 +44,10 @@ function Arrival() {
                  columns={[1,2,3]} 
                  spacing='20px'>
                      {
-         data.map((item)=>{
+            data&&data.map((item)=>{
             return(
                     <Box key={item.price}>
-                      <Text pos="absolute" pl={[300,180,300,300]} color="gray">❤</Text>
+                     
                       <Text paddingLeft="5px" color="gray" position='absolute'>{item.productbutton}</Text>
                       <Image 
                       borderRadius='10px'
@@ -61,64 +57,22 @@ function Arrival() {
                       alt="shiv"/>
                       <Text fontSize="18px" color="black">{item.ph1}</Text>
                       <Text color="gray">{item.pa1}</Text>
-                     <Text fontWeight='bold' color="black">{item.price}</Text></Box>
+                     <Text fontWeight='bold' color="black">{item.price}</Text>
+                     <Box display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
+                      <Button >ADD TO CART</Button>
+                      <Button >ADD TO WISHLIST</Button>
+                     </Box>
+                     </Box>
                            )
                           })}
                
                 </SimpleGrid>
+                
            
     </Box>
     </Box>
     </>
   )
 }
-function PaginatedItems({ itemsPerPage }) {
-  // We start with an empty list of items.
-  const [currentItems, setCurrentItems] = useState(null);
-  const [pageCount, setPageCount] = useState(0);
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
 
-  useEffect(() => {
-    // Fetch items from another resources.
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(items.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
-
-  // Invoke when user click to request another page.
-  const handlePageClick = (event) => {
-    const newOffset = event.selected * itemsPerPage % items.length;
-    console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
-    setItemOffset(newOffset);
-  };
-
-  return (
-    <>
-      <Items currentItems={currentItems} />
-      <ReactPaginate
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={3}
-        marginPagesDisplayed={2}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
-        breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
-        containerClassName="pagination"
-        activeClassName="active"
-        renderOnZeroPageCount={null}
-      />
-    </>
-  );
-}
 export default Arrival
