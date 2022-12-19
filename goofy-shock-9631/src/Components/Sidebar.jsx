@@ -5,9 +5,9 @@ import '../Pages/Sidebar.css';
 
 function Sidebar() {
   return (
-    <Box className="App">
+    <Box>
         
-       <Box className="sidebar"
+       <Box display={['none','none','block']} className="sidebar"
       //  position='fixed'
        width='250px'
        top='0'
@@ -15,7 +15,7 @@ function Sidebar() {
        bottom='0'
        background='#ffffff'
        border='px solid red'
-       paddingTop='50px'
+       paddingTop='0px'
        >
         <Heading as='h1'
         display= 'block'

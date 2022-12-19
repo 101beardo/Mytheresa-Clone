@@ -51,10 +51,13 @@ import {
     MenuButton,
     MenuList,
     useColorModeValue,
+    Link
 } from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
 
 
 export default function Navbar() {
+    const navigate=useNavigate();
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Menu isOpen={isOpen}>
@@ -67,15 +70,21 @@ export default function Navbar() {
                 // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
                 
                 onMouseEnter={onOpen}
-                onMouseLeave={onClose}
-            >
-                NEW ARRIVALS 
+                onMouseLeave={onClose}>
+                NEW ARRIVALS
+               
             </MenuButton>
             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
                 <MenuItem>Menu Item 1</MenuItem>
                 <MenuItem>Menu Item 2</MenuItem>
                 <MenuItem>Menu Item 3</MenuItem>
+                <MenuItem>Menu Item 1</MenuItem>
+                <MenuItem>Menu Item 2</MenuItem>
+                <MenuItem>Menu Item 3</MenuItem>
             </MenuList>
+            
+            
         </Menu>
+        
     )
 }
