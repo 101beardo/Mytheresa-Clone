@@ -17,9 +17,9 @@ const getDataError=()=>{
     }
 }
 
-export const getdata=(dispatch)=>{
+export const getdata=(params)=>(dispatch)=>{
     dispatch(getDataRequest());
-    return axios.get('http://localhost:8080/mens')
+    return axios.get('http://localhost:8080/mens',params)
     .then((res)=>dispatch(getDataSuccess(res.data)))
     .catch((error)=>{
         dispatch(getDataError(error))

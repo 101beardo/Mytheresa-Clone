@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useMemo} from 'react';
 import classnames from 'classnames';
 import { usePagination, DOTS } from './usePagination';
 import {Box} from '@chakra-ui/react';
+
 const Pagination = props => {
   const {
     onPageChange,
@@ -19,7 +20,7 @@ const Pagination = props => {
     pageSize
   });
 
-  // If there are less than 2 times in pagination range we shall not render the component
+
   if (currentPage === 0 || paginationRange.length < 2) {
     return null;
   }
@@ -34,47 +35,46 @@ const Pagination = props => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
+    <Box cursor='pointer' w={[12,12,12]} display='flex' justifyContent={["space-evenly",'space-evenly','space-evenly']} gap={[2,2,2]}
       className={classnames('pagination-container', { [className]: className })}
     >
-       {/* Left navigation arrow */}
-      <li
+  
+      <Box
         className={classnames('pagination-item', {
           disabled: currentPage === 1
         })}
         onClick={onPrevious}
       >
         <Box className="arrow left" />
-      </li>
+      </Box>
       {paginationRange.map(pageNumber => {
          
-        // If the pageItem is a DOT, render the DOTS unicode character
         if (pageNumber === DOTS) {
-          return <li className="pagination-item dots">&#8230;</li>;
+          return <Box className="pagination-item dots">&#8230;</Box>;
         }
 		
-        // Render our Page Pills
+        
         return (
-          <li
+          <Box
             className={classnames('pagination-item', {
               selected: pageNumber === currentPage
             })}
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}
-          </li>
+          </Box>
         );
       })}
-      {/*  Right Navigation arrow */}
-      <li
+ 
+      <Box
         className={classnames('pagination-item', {
           disabled: currentPage === lastPage
         })}
         onClick={onNext}
       >
         <Box className="arrow right" />
-      </li>
-    </ul>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,12 +1,13 @@
 {
   "mens": [
       {
+        "id":1,
         "productbutton": "Runway",
         "product-image href": "https://www.mytheresa.com/int_en/our-legacy-shearling-trimmed-leather-jacket-2521942.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/b2/P00706286.jpg",
         "ph1": "Our Legacy",
         "pa1": "Shearling-trimmed leather jacket",
-        "price": "€ 1,515",
+        "price": 518,
         "availability": "available sizes",
         "available-size": "IT- 44XS",
         "availabe-size": "IT- 46S",
@@ -22,12 +23,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":2,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/acne-studios-face-crossbody-bag-2519438.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/c4/P00711488.jpg",
         "ph1": "Acne Studios",
         "pa1": "Face crossbody bag",
-        "price": "€ 155",
+        "price": 198,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -43,12 +45,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":3,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/acne-studios-cotton-jersey-sweatpants-2519166.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d6/P00711527.jpg",
         "ph1": "Acne Studios",
         "pa1": "Cotton jersey sweatpants",
-        "price": "€ 229",
+        "price": 220,
         "availability": "available sizes",
         "available-size": "XS",
         "availabe-size": "S",
@@ -64,12 +67,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":4,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/marni-tie-dye-canvas-bucket-hat-2517178.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/00/P00758207.jpg",
         "ph1": "Marni",
         "pa1": "Tie-dye canvas bucket hat",
-        "price": "€ 295",
+        "price": 299,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -85,12 +89,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":5,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/christian-louboutin-coolcard-leather-bifold-wallet-2517466.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/4c/P00734022.jpg",
         "ph1": "Christian Louboutin",
         "pa1": "Coolcard leather bifold wallet",
-        "price": "€ 295",
+        "price": 299,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -106,12 +111,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":6,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/alexander-mcqueen-patchwork-straight-jeans-2510018.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/46/P00745662.jpg",
         "ph1": "Alexander McQueen",
         "pa1": "Patchwork straight jeans",
-        "price": "€ 835",
+        "price": 839,
         "availability": "available sizes",
         "available-size": "IT_ 48M",
         "availabe-size": "IT_ 50L",
@@ -127,12 +133,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":7,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/valentino-leather-trimmed-wool-overcoat-2521947.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ca/P00734285.jpg",
         "ph1": "Valentino",
         "pa1": "Leather-trimmed wool overcoat",
-        "prie": "€,355",
+        "prie": 355,
         "availability": "available sizes",
         "available-size": "IT- 46S",
         "availabe-size": "IT- 48M",
@@ -148,12 +155,14 @@
         "available-sizes 7": ""
       },
       {
+      
+        "id": 8,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-gg-medium-packing-cube-2512645.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a7/P00737670.jpg",
         "ph1": "Gucci",
         "pa1": "GG Medium packing cube",
-        "price": "€ 379",
+        "price": 389,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -169,12 +178,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":9,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/christian-louboutin-pablo-suede-brogues-2517475.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/0e/P00734044.jpg",
         "ph1": "Christian Louboutin",
         "pa1": "Pablo suede brogues",
-        "price": "€ 839",
+        "price": 839,
         "availability": "available sizes",
         "available-size": "EU_ 39",
         "availabe-size": "EU_ 40",
@@ -190,12 +200,13 @@
         "available-sizes 7": "EU_ 45"
       },
       {
+        "id":10,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/giorgio-armani-printed-silk-shirt-2512183.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00726570.jpg",
         "ph1": "Giorgio Armani",
         "pa1": "Printed silk shirt",
-        "price": "€ 835",
+        "price": 830,
         "availability": "available sizes",
         "available-size": "EU- 38 S",
         "availabe-size": "EU- 39 M",
@@ -211,12 +222,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":11,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/loro-piana-windmater-reversible-bomber-jacket-1529542.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6d/P00490125.jpg",
         "ph1": "Loro Piana",
         "pa1": "Windmate® reversible bomber jacket",
-        "price": "€ 1,790",
+        "price": 79,
         "availability": "available sizes",
         "available-size": "EU 46S",
         "availabe-size": "EU 48M",
@@ -232,12 +244,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":12,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/tom-ford-buckley-leather-briefcase-1526882.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/20/P00488902.jpg",
         "ph1": "Tom Ford",
         "pa1": "Buckley leather briefcase",
-        "price": "€ 1,975",
+        "price": 97,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -253,12 +266,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":13,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/valentino-garavani-vlogo-leather-penny-loafers-2437767.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2c/P00689123.jpg",
         "ph1": "Valentino Garavani",
         "pa1": "VLogo leather penny loafers",
-        "price": "€ 730",
+        "price": 739,
         "availability": "available sizes",
         "available-size": "EU_ 39",
         "availabe-size": "EU_ 40",
@@ -274,12 +288,13 @@
         "available-sizes 7": "EU_ 45"
       },
       {
+        "id":14,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/loro-piana-mezzocollo-roadster-sweater-1377922.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e3/P00440456.jpg",
         "ph1": "Loro Piana",
         "pa1": "Mezzocollo Roadster sweater",
-        "price": "€ 630",
+        "price": 639,
         "availability": "available sizes",
         "available-size": "EU 46S",
         "availabe-size": "EU 48M",
@@ -295,12 +310,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":15,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-jackie-1961-bag-2085241.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/82/P00631723.jpg",
         "ph1": "Gucci",
         "pa1": "Jackie 1961 bag",
-        "prie": "€,269",
+        "price": 269,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -316,12 +332,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":16,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/christian-louboutin-happyrui-spikes-sneakers-1670870.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f4/P00513440.jpg",
         "ph1": "Christian Louboutin",
         "pa1": "Happyrui Spikes sneakers",
-        "price": "€ 670",
+        "price": 678,
         "availability": "available sizes",
         "available-size": "EU_ 39",
         "availabe-size": "EU_ 40",
@@ -337,12 +354,13 @@
         "available-sizes 7": "EU_ 45"
       },
       {
+        "id":17,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/jw-anderson-logo-cotton-t-shirt-2521404.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/66/P00740023.jpg",
         "ph1": "JW Anderson",
         "pa1": "Logo cotton T-shirt",
-        "price": "€ 99",
+        "price": 989,
         "availability": "available sizes",
         "available-size": "XS",
         "availabe-size": "S",
@@ -358,12 +376,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":18,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/givenchy-wool-blend-and-leather-varsity-jacket-2494324.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/39/P00770930.jpg",
         "ph1": "Givenchy",
         "pa1": "Wool-blend and leather varsity jacket",
-        "prie": "€,940",
+        "price": 940,
         "availability": "available sizes",
         "available-size": "IT- 44XS",
         "availabe-size": "IT- 46S",
@@ -379,12 +398,13 @@
         "available-sizes 7": "IT- 563XL"
       },
       {
+        "id":19,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/spinelli-kilcollin-sirius-sterling-silver-and-18kt-gold-ring-2514069.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/39/P00766428.jpg",
         "ph1": "Spinelli Kilcollin",
         "pa1": "Sirius sterling silver and 18kt gold ring",
-        "price": "€ 279",
+        "price": 278,
         "availability": "available sizes",
         "available-size": "U-S 1062MM",
         "availabe-size": "U-S 12RI-US12",
@@ -400,12 +420,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":20,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/saint-laurent-sac-de-jour-leather-briefcase-2157085.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/5a/P00645464.jpg",
         "ph1": "Saint Laurent",
         "pa1": "Sac de Jour leather briefcase",
-        "price": "€ 1,425",
+        "price": 482,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -421,12 +442,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":21,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/givenchy-wool-and-cashmere-sweater-2494329.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/08/P00770931.jpg",
         "ph1": "Givenchy",
         "pa1": "Wool and cashmere sweater",
-        "price": "€ 820",
+        "price": 207,
         "availability": "available sizes",
         "available-size": "XS",
         "availabe-size": "S",
@@ -442,12 +464,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":22,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/moncler-kerinci-down-jacket-2342646.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7b/P00709249.jpg",
         "ph1": "Moncler",
         "pa1": "Kerinci down jacket",
-        "price": "€ 1,369",
+        "price": 386,
         "availability": "available sizes",
         "available-size": "_ 1S",
         "availabe-size": "_ 2M",
@@ -463,12 +486,13 @@
         "available-sizes 7": "_ 74XL"
       },
       {
+        "id":23,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/loro-piana-cashmere-baseball-cap-1967501.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e2/P00585791.jpg",
         "ph1": "Loro Piana",
         "pa1": "Cashmere baseball cap",
-        "price": "€ 389",
+        "price": 838,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -484,12 +508,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":24,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-quilted-snow-boots-2503525.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6e/P00737614.jpg",
         "ph1": "Gucci",
         "pa1": "Quilted snow boots",
-        "price": "€ 749",
+        "price": 7874,
         "availability": "available sizes",
         "available-size": "UK_ 5EU 39",
         "availabe-size": "UK_ 6EU 40",
@@ -505,12 +530,13 @@
         "available-sizes 7": "UK_ 11EU 45"
       },
       {
+        "id":25,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/moncler-lunetiere-down-jacket-2301729.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d2/P00708993.jpg",
         "ph1": "Moncler",
         "pa1": "Lunetiere down jacket",
-        "price": "€ 1,159",
+        "price": 1765,
         "availability": "available sizes",
         "available-size": "_ 1S",
         "availabe-size": "_ 2M",
@@ -526,12 +552,13 @@
         "available-sizes 7": "_ 74XL"
       },
       {
+        "id":26,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/spinelli-kilcollin-amaryllis-sterling-silver-and-18kt-gold-ring-2514079.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/5d/P00766431.jpg",
         "ph1": "Spinelli Kilcollin",
         "pa1": "Amaryllis sterling silver and 18kt gold ring",
-        "price": "€ 1,109",
+        "price": 1086,
         "availability": "available sizes",
         "available-size": "U-S 856 MM",
         "availabe-size": "U-S 8.558 MM",
@@ -547,12 +574,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":27,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-ophidia-medium-tote-bag-2513201.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/56/P00737647.jpg",
         "ph1": "Gucci",
         "pa1": "Ophidia Medium tote bag",
-        "price": "€ 1,975",
+        "price": 977,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -568,12 +596,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":28,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-shearling-trimmed-wool-cardigan-2491813.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/93/P00737482.jpg",
         "ph1": "Gucci",
         "pa1": "Shearling-trimmed wool cardigan",
-        "prie": "€,775",
+        "price": 775,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -589,12 +618,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":29,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/spinelli-kilcollin-marigold-sterling-silver-18kt-yellow-and-rose-gold-ring-with-diamonds-2514094.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/31/P00766445.jpg",
         "ph1": "Spinelli Kilcollin",
         "pa1": "Marigold sterling silver, 18kt yellow, and rose gold ring with diamonds",
-        "price": "€ 1,665",
+        "price": 696,
         "availability": "available sizes",
         "available-size": "U-S 856 MM",
         "availabe-size": "",
@@ -610,12 +640,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":30,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/bottega-veneta-intrecciato-leather-loafers-2510451.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/49/P00745780.jpg",
         "ph1": "Bottega Veneta",
         "pa1": "Intrecciato leather loafers",
-        "price": "€ 925",
+        "price": 92,
         "availability": "available sizes",
         "available-size": "EU_ 40",
         "availabe-size": "EU_ 40.5",
@@ -631,12 +662,13 @@
         "available-sizes 7": "EU_ 43"
       },
       {
+        "id":31,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-horsebit-striped-wide-leg-wool-pants-2512188.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/70/P00737496.jpg",
         "ph1": "Gucci",
         "pa1": "Horsebit striped wide-leg wool pants",
-        "price": "€ 925",
+        "price": 92,
         "availability": "available sizes",
         "available-size": "IT- 46S",
         "availabe-size": "IT- 48M",
@@ -652,12 +684,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":32,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/alexander-mcqueen-double-breasted-wool-blazer-2513069.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/fa/P00745712.jpg",
         "ph1": "Alexander McQueen",
         "pa1": "Double-breasted wool blazer",
-        "prie": "€,009",
+        "price": "009",
         "availability": "available sizes",
         "available-size": "IT- 48M",
         "availabe-size": "IT- 50L",
@@ -673,12 +706,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":33,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/bottega-veneta-intrecciato-medium-leather-document-case-2510694.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e1/P00745818.jpg",
         "ph1": "Bottega Veneta",
         "pa1": "Intrecciato Medium leather document case",
-        "price": "€ 1,599",
+        "price": 59,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -694,12 +728,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":34,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/spinelli-kilcollin-raneth-18kt-gold-rose-gold-and-sterling-silver-ring-2514090.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/83/P00755643.jpg",
         "ph1": "Spinelli Kilcollin",
         "pa1": "Raneth 18kt gold, rose gold, and sterling silver ring",
-        "prie": "€,215",
+        "price": "215",
         "availability": "available sizes",
         "available-size": "U-S 8.558 MM",
         "availabe-size": "U-S 9.560 MM",
@@ -715,12 +750,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":35,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-straight-wool-and-cashmere-pants-2509572.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/70/P00749026.jpg",
         "ph1": "Gucci",
         "pa1": "Straight wool and cashmere pants",
-        "price": "€ 1,265",
+        "price": 26,
         "availability": "available sizes",
         "available-size": "IT_ 46S",
         "availabe-size": "IT_ 48M",
@@ -736,12 +772,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":36,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/burberry-checked-wool-and-leather-bomber-jacket-2514983.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/65/P00761612.jpg",
         "ph1": "Burberry",
         "pa1": "Checked wool and leather bomber jacket",
-        "prie": "€,265",
+        "price": 365,
         "availability": "available sizes",
         "available-size": "IT- 46S",
         "availabe-size": "IT- 48S/M",
@@ -757,12 +794,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":37,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/valentino-garavani-rockstud-bucket-hat-2514995.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e1/P00734291.jpg",
         "ph1": "Valentino Garavani",
         "pa1": "Rockstud bucket hat",
-        "price": "€ 415",
+        "price": 41,
         "availability": "available sizes",
         "available-size": "57",
         "availabe-size": "60",
@@ -778,12 +816,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":38,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/balenciaga-x-adidas-leather-belt-bag-2517292.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/c9/P00772856.jpg",
         "ph1": "Balenciaga",
         "pa1": "x Adidas leather belt bag",
-        "price": "€ 1,250",
+        "price": 25,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -799,12 +838,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":39,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/valentino-rockstud-cotton-t-shirt-2514977.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cb/P00734259.jpg",
         "ph1": "Valentino",
         "pa1": "Rockstud cotton T-shirt",
-        "price": "€ 465",
+        "price": 462,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -820,12 +860,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":40,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/burberry-monogram-jacquard-down-jacket-2511919.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7b/P00721464.jpg",
         "ph1": "Burberry",
         "pa1": "Monogram jacquard down jacket",
-        "price": "€ 1,589",
+        "price": 58,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -841,12 +882,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":41,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-gg-wool-blend-fleece-beanie-2495886.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/420/475/95/jpeg/catalog/product/fc/P00707219.jpg",
         "ph1": "Gucci",
         "pa1": "GG wool-blend fleece beanie",
-        "price": "€ 345",
+        "price": 34,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -862,12 +904,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":42,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-gg-faux-fur-ankle-boots-2503500.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/420/475/95/jpeg/catalog/product/bf/P00582240.jpg",
         "ph1": "Gucci",
         "pa1": "GG faux fur ankle boots",
-        "price": "€ 665",
+        "price": 66,
         "availability": "available sizes",
         "available-size": "UK_ 6EU 40",
         "availabe-size": "UK_ 7EU 41",
@@ -883,12 +926,13 @@
         "available-sizes 7": "UK_ 12EU 46"
       },
       {
+        "id":43,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/thom-browne-cable-knit-crewneck-sweater-2516121.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6d/P00772331.jpg",
         "ph1": "Thom Browne",
         "pa1": "Cable-knit crewneck sweater",
-        "price": "€ 725",
+        "price": 72,
         "availability": "available sizes",
         "available-size": "_ 0XS",
         "availabe-size": "_ 1S",
@@ -904,12 +948,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":44,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/bottega-veneta-shearling-trimmed-denim-jacket-2367930.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/580/580/90/jpeg/catalog/product/21/P00710659_b1.jpg",
         "ph1": "Bottega Veneta",
         "pa1": "Shearling-trimmed denim jacket",
-        "price": "€ 3,785",
+        "price": 385,
         "availability": "available sizes",
         "available-size": "IT- 46S",
         "availabe-size": "IT- 48M",
@@ -925,12 +970,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":45,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/tom-ford-ribbed-knit-cashmere-beanie-2501153.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/380/380/90/jpeg/catalog/product/90/P00690633.jpg",
         "ph1": "Tom Ford",
         "pa1": "Ribbed-knit cashmere beanie",
-        "price": "€ 289",
+        "price": 28,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -946,12 +992,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":46,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-gucci-blondie-canvas-shoulder-bag-2515465.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/df/P00749754.jpg",
         "ph1": "Gucci",
         "pa1": "Gucci Blondie canvas shoulder bag",
-        "prie": "€,059",
+        "price": "059",
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -967,12 +1014,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":47,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/valentino-rockstud-cotton-denim-jeans-2514964.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/88/P00761772_b1.jpg",
         "ph1": "Valentino",
         "pa1": "Rockstud cotton denim jeans",
-        "price": "€ 1,095",
+        "price": 109,
         "availability": "available sizes",
         "available-size": "_ 30",
         "availabe-size": "_ 31",
@@ -988,12 +1036,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":48,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/burberry-camden-car-coat-2514635.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/420/475/95/jpeg/catalog/product/f4/P00674379.jpg",
         "ph1": "Burberry",
         "pa1": "Camden car coat",
-        "price": "€ 1,425",
+        "price": 42,
         "availability": "available sizes",
         "available-size": "IT- 46S",
         "availabe-size": "IT- 48S/M",
@@ -1009,12 +1058,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":49,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/shay-jewelry-18kt-white-gold-bracelet-with-diamonds-2511785.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/22/P00766305.jpg",
         "ph1": "Shay Jewelry",
         "pa1": "18kt white gold bracelet with diamonds",
-        "price": "€ 5,365",
+        "price": 565,
         "availability": "",
         "available-size": "",
         "availabe-size": "",
@@ -1030,12 +1080,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":50,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/gucci-horsebit-leather-loafers-1438819.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00461579.jpg",
         "ph1": "Gucci",
         "pa1": "Horsebit leather loafers",
-        "price": "€ 609",
+        "price": 640,
         "availability": "available sizes",
         "available-size": "UK_ 5EU 39",
         "availabe-size": "UK_ 6EU 40",
@@ -1051,12 +1102,13 @@
         "available-sizes 7": "UK_ 11EU 45"
       },
       {
+        "id":51,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/valentino-straight-fit-cotton-jeans-2514971.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00734300.jpg",
         "ph1": "Valentino",
         "pa1": "Straight-fit cotton jeans",
-        "price": "€ 925",
+        "price": 927,
         "availability": "available sizes",
         "available-size": "_ 30",
         "availabe-size": "_ 31",
@@ -1072,12 +1124,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":52,
         "productbutton": "NEW SEASON",
-        "product-image href": "https://www.mytheresa.com/int_en/thom-browne-wool-and-mohair-sweater-2516101.html?departmentgroup=MENSWEAR&catref=category",
+        "product-image href": "",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/62/P00734358.jpg",
         "ph1": "Thom Browne",
         "pa1": "Wool and mohair sweater",
-        "price": "€ 759",
+        "price": 756,
         "availability": "available sizes",
         "available-size": "_ 003XS",
         "availabe-size": "_ 0XS",
@@ -1093,12 +1146,13 @@
         "available-sizes 7": "_ 5XXL"
       },
       {
+        "id":53,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/spinelli-kilcollin-hyacinth-sterling-silver-18kt-gold-and-rose-gold-ring-2514099.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/9f/P00766448.jpg",
         "ph1": "Spinelli Kilcollin",
         "pa1": "Hyacinth sterling silver, 18kt gold, and rose gold ring",
-        "price": "€ 1,569",
+        "price": 56,
         "availability": "available sizes",
         "available-size": "U-S 856 MM",
         "availabe-size": "U-S 8.558 MM",
@@ -1114,12 +1168,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":54,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/thom-browne-leather-belt-2516150.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7e/P00698896.jpg",
         "ph1": "Thom Browne",
         "pa1": "Leather belt",
-        "price": "€ 429",
+        "price": 426,
         "availability": "available sizes",
         "available-size": "85CM",
         "availabe-size": "90CM",
@@ -1135,12 +1190,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":55,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/brunello-cucinelli-slim-fit-virgin-wool-pants-2515279.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d3/P00738270.jpg",
         "ph1": "Brunello Cucinelli",
         "pa1": "Slim-fit virgin wool pants",
-        "price": "€ 799",
+        "price": 797,
         "availability": "available sizes",
         "available-size": "IT_ 46S",
         "availabe-size": "IT_ 48M",
@@ -1156,12 +1212,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":56,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/acne-studios-wool-blend-varsity-jacket-2518516.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/75/P00711517.jpg",
         "ph1": "Acne Studios",
         "pa1": "Wool-blend varsity jacket",
-        "price": "€ 499",
+        "price": 499,
         "availability": "available sizes",
         "available-size": "XS",
         "availabe-size": "S",
@@ -1177,12 +1234,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":57,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/marni-logo-cotton-baseball-cap-2517190.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/80/P00758282.jpg",
         "ph1": "Marni",
         "pa1": "Logo cotton baseball cap",
-        "price": "€ 295",
+        "price": 297,
         "availability": "available sizes",
         "available-size": "S",
         "availabe-size": "M",
@@ -1198,12 +1256,13 @@
         "available-sizes 7": ""
       },
       {
+        "id":58,
         "productbutton": "",
         "product-image href": "https://www.mytheresa.com/int_en/maison-margiela-new-evolution-felted-sneakers-2461380.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/380/380/90/jpeg/catalog/product/ee/P00710613.jpg",
         "ph1": "Maison Margiela",
         "pa1": "New Evolution felted sneakers",
-        "price": "€ 439",
+        "price": 438,
         "availability": "available sizes",
         "available-size": "EU_ 39",
         "availabe-size": "EU_ 40",
@@ -1219,12 +1278,13 @@
         "available-sizes 7": "EU_ 45"
       },
       {
+        "id":59,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/marni-logo-cotton-jersey-t-shirt-2517186.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/31/P00758249.jpg",
         "ph1": "Marni",
         "pa1": "Logo cotton jersey T-shirt",
-        "price": "€ 215",
+        "price": 218,
         "availability": "available sizes",
         "available-size": "IT- 44XS",
         "availabe-size": "IT- 46S",
@@ -1240,12 +1300,13 @@
         "available-sizes 7": "IT- 563XL"
       },
       {
+        "id":60,
         "productbutton": "NEW SEASON",
         "product-image href": "https://www.mytheresa.com/int_en/thom-browne-technical-jacket-2515552.html?departmentgroup=MENSWEAR&catref=category",
         "lazyloaded": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/82/P00734350.jpg",
         "ph1": "Thom Browne",
         "pa1": "Technical jacket",
-        "price": "€ 1,105",
+        "price": 10,
         "availability": "available sizes",
         "available-size": "_ 003XS",
         "availabe-size": "_ 0XS",
