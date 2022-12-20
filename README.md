@@ -23,6 +23,11 @@ Tech Stack-:
 - External Css
 - for Api we used Json Server
 
+Steps to start -:
+- npm install 
+- npm run server
+- npm run start
+Now site is infront of you
 
 Team Members-:
 - Tarun Sharma
