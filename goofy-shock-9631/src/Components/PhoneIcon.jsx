@@ -2,6 +2,7 @@
 import { Icon } from '@chakra-ui/icon'
 
 import { Box, Text } from '@chakra-ui/layout'
+import { useDisclosure } from '@chakra-ui/react'
 
 
 import React from 'react'
@@ -9,9 +10,9 @@ import {BsFillTelephoneFill} from "react-icons/bs"
 
 
 const PhoneIcon = () => {
-    
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <Box>
+    <Box isOpen={isOpen} >
     <Box 
     pos="fixed"
     display={["none","none","flex"]}
@@ -22,11 +23,12 @@ const PhoneIcon = () => {
     justifyContent="center"
     alignItems="center"
     
+    
     >        
-      <Icon  boxSize="25px" as={BsFillTelephoneFill} />
+      <Icon  boxSize="25px" onMouseEnter={onOpen} onMouseLeave={onClose} as={BsFillTelephoneFill}/>
       
-    </Box>
-    {/* <Box align="center" mt="20%" bgColor="white" pos="fixed" border="1px solid red" w="300px" >
+    
+    {/* <Box align="center" mt="20%" bgColor="white" pos="fixed" border="1px solid red" w="300px"  onMouseEnter={onOpen} onMouseLeave={onClose} >
     <Text>
     +49 89 127695-101
     </Text>
@@ -49,6 +51,7 @@ const PhoneIcon = () => {
     Puerto Rico: 1-787-303-4205
     </Text>
   </Box> */}
+  </Box>
   </Box>
   )
 }

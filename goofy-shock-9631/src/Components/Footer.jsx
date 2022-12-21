@@ -22,7 +22,7 @@ const Footer = () => {
       </Box>
       <hr/>
       <Box align="left" m="30px"  display={["block","flex","flex"]} justifyContent="space-evenly" >
-            <Text  w="25%" >SERVICE & SECURITY
+            <Text  w={["100%","25%","25%"]} >SERVICE & SECURITY
               <Box   m="10px"  fontSize="15px" >
 
                 
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Text  mb="10px" color="gray" >SSL encryption for secure transactions and personal data</Text>
               </Box>
             </Text>
-            <Text w="25%" >MYTHERESA
+            <Text  w={["100%","25%","25%"]} >MYTHERESA
             <Box color="gray" w="95%"  m="10px"  fontSize="15px" >
                 <Text>About us</Text>
                 <Text>Trust & services</Text>
@@ -47,7 +47,7 @@ const Footer = () => {
                 <Text>Tax-Free Shopping</Text>
               </Box>
             </Text>
-            <Text w="25%" >CUSTOMER CARE
+            <Text w={["100%","25%","25%"]} >CUSTOMER CARE
             <Box color="gray" w="95%"  m="10px"  fontSize="15px" >
                 <Text>Contact us</Text>
                 <Text>Shipping information</Text>
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Text>Gift card</Text>
               </Box>
             </Text>
-            <Text w="25%" >GET TREND UPDATES, STYLE TIPS AND MORE
+            <Text  w={["100%","25%","25%"]} >GET TREND UPDATES, STYLE TIPS AND MORE
             <Box w="95%"  m="10px"  fontSize="15px" >
                 <Box mb="10px" display="flex" >
                 <Input placeholder="your email address here ..." />
@@ -93,12 +93,12 @@ const Footer = () => {
       <Box mb="50px" display="flex" justifyContent="space-between" color="gray" >
       <Box>
       <Text display="flex" mx="10px" >payment methods:
-      <Image mx="10px" src={pic1}/>
+      <Image w="70%"  mx="10px" src={pic1}/>
       </Text>
       
       </Box>
       <Box>
-      <Text  display="flex" mx="10px" >delivered by:
+      <Text w="50%"  display="flex" mx="10px" >delivered by:
       <Image src={pic2}/>
       </Text>
       </Box>

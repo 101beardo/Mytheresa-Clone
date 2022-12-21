@@ -1,13 +1,18 @@
 import React from 'react'
-import { Box, Link, useDisclosure,Button, Collapse, Icon, Image} from '@chakra-ui/react'
+import { Box, Link, useDisclosure,Button, Collapse, Icon, Image, useColorModeValue, Text} from '@chakra-ui/react'
 import {GiHamburgerMenu} from "react-icons/gi"
 import {CgClose} from "react-icons/cg"
 import { useNavigate } from 'react-router'
+import { useSelector } from 'react-redux'
+import { store } from '../Redux/store'
+import { AiOutlineUser } from 'react-icons/ai'
 
 
 
 
 const Navbar = () => {
+  const isAuth=useSelector(store=>store.AuthReducer.isAuth)
+  // console.log(isAuth)
      // border="1px solid red"
 
   const { isOpen, onToggle } = useDisclosure()
@@ -34,16 +39,18 @@ const Navbar = () => {
           
           <Box color="gray" fontSize={['12px']} fontWeight="bold" w="40%" display="flex" justifyContent="space-evenly"  >
                 <Link style={{ textDecoration: 'none' }}  href='#r'>Signup for Newsletter</Link>
-                <Link style={{ textDecoration: 'none' }}  href='#'>My account</Link>
+                <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/login`)}}>My account</Link>
                 <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/wishlist`)}}>My wishlist</Link>
 
-                {/* <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link> */}
-          
+                <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link>
+                {isAuth ? <Box display="flex" > <Link mr="10px" style={{ textDecoration: 'none' }}  onClick={() => {}} >Logout</Link> <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/admin`)}}><Icon as={AiOutlineUser}/>  </Link></Box> : <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/logini`)}}>Login</Link>}
+          </Box>
+          </Box>
      
 
 
       
-          <Link style={{ textDecoration: "none" }} onClick={onOpen}>
+          {/* <Link style={{ textDecoration: "none" }} onClick={onOpen}>
             Malaysia | English
           </Link>
 
@@ -154,17 +161,18 @@ const Navbar = () => {
             </ModalContent>
           </Modal>
           </Box> 
-        </Box>
-        {/* <Box w="100%" 
+        </Box> */}
+        <Box w="100%" 
           h="70px" 
           p="20px"
           display={["flex","flex","none"]}
-          // position={"fixed"}
+          position={"fixed"}
           fontSize='20px'
-          zIndex={1}
+          bgColor="white"
+          zIndex={99999}
           align="right">
                 <Box w="100%">
-                        {isOpen ? <Button  onClick={onToggle}   p="10px" ><Icon boxSize="25px" as={CgClose}/></Button> : <Button  onClick={onToggle}   p="10px" ><Icon boxSize="25px" as={GiHamburgerMenu}/></Button> } 
+                        {isOpen ? <Button  onClick={onToggle}   p="10px" ><Icon boxSize="25px" as={CgClose}/></Button> : <Button bgColor="white" onClick={onToggle}   p="10px" ><Icon  boxSize="25px" as={GiHamburgerMenu}/></Button> } 
        
                         <Collapse in={isOpen} animateOpacity>
                                 <Box
@@ -190,10 +198,10 @@ const Navbar = () => {
                             </Collapse>
                     </Box>
           
-        </Box> */}
+        </Box>
       <Image  mt="30px"  w="22%" src='https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20221130T110112'/>
-      </Box>
-
+      
+</Box>
   
   );
 };
