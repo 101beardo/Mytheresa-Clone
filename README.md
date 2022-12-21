@@ -3,7 +3,7 @@ An e-commerce website made using redux Chakra UI with all CRUD operations.
 MYTHERESA - THE FINEST EDIT IN LUXURY FASHION
 Mytheresa is the finest edit in luxury fashion for women, men and kids. We have over 200 of the best international designers, 600 new arrivals each week, fast and reliable delivery, excellent customer service, utmost security and data protection, and free returns and exchanges within 30 days.
  <h1>fully responsive website</h1>
- <h2>Netlify Link</h2>-:https://gleaming-bubblegum-b5bcf8.netlify.app/<br/>
+ <h2>Netlify Link</h2>-:https://luminous-swan-cc6644.netlify.app/<br/>
 Working Feautres-:
 - Landing Page
 - Womens Page
