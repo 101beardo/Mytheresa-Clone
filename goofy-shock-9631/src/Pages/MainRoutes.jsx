@@ -10,6 +10,10 @@ import Mens from './Mens'
 import Wishlist from './Wishlist'
 import WomenPage from './WomenPage';
 import Arrival from '../Components/Arrival'
+import LoginRegister from '../Components/Login_Register'
+import Login from '../Components/Login'
+import Cart from './Cart'
+import Add from './Add'
 
 const MainRoutes = () => {
   return (
@@ -17,13 +21,17 @@ const MainRoutes = () => {
      <Navbar/>
      <Dropdown/>
       <Routes>
-     <Route path='/arrival' element={<Arrival/>}/>
-      <Route path='/mens' element={<Mens/>}/>
-      <Route path='/admin' element={<Admin/>}/>
+        <Route path='/arrival' element={<Arrival/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/login' element={<LoginRegister/>}/>
+        <Route path='/logini' element={<Login/>}/>
+        <Route path='/mens' element={<Mens/>}/>
+        <Route path='/admin' element={<Admin/>}/>
         <Route path='/kids' element={<Kids/>}/>
         <Route path='/womens' element={<WomenPage/>}/>
         <Route path='/life' element={<Life/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/add' element={<Add/>}/>
       </Routes>
       <Footer/>
     </div>
