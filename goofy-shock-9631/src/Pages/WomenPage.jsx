@@ -1,9 +1,10 @@
 import { Box,Button,Image,Text ,SimpleGrid} from '@chakra-ui/react'
 import React from 'react'
 
+
 function WomenPage() {
   return (
-    
+
     <Box
     align="center"
     >

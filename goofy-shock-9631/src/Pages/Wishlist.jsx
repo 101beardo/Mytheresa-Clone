@@ -1,41 +1,60 @@
 import { SearchIcon } from '@chakra-ui/icons'
-import { Box, Button, Container, Image, Input, Link, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Button, Container, Image, Input, Link, SimpleGrid, Text } from '@chakra-ui/react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { getWishData } from '../Redux/AppReducer/action';
 
 const Wishlist = () => {
+    const wish=useSelector((store)=>store.AppReducer.wish);
+    const dispatch=useDispatch()
+
+
+    useEffect(()=>{
+      
+        dispatch(getWishData())
+      
+    },[wish.length,dispatch])
+    console.log(wish)
+  
   return (
     <Box  mb="10px" align="center">
-    <Box 
-        mb="6px"
-        w="100%" 
-        h="70px" 
-        p="20px"
-        display={["none","none","flex"]}
-        justifyContent="space-between"
-        fontSize={["14px"]}
-        >
-        <Box  w="59%" display="flex" justifyContent="space-evenly" >
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#">NEW ARRIVALS</Link>
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#mens">DESIGNERS</Link>
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#">CLOTHING</Link>
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#">SHOES</Link>
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#">BAGS</Link>
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#">ACCESSORIES</Link>
-              <Link color="gray" style={{ textDecoration: 'none' }}  href="#">FESTIVE SEASON</Link>
-              <Link color="red" style={{ textDecoration: 'none' }}  href="#">SALE</Link>
-        </Box>
-        
     
-              <Box fontSize={['12px']} mr="60px" p="10px"  w="18%" display="flex" justifyContent="right" alignItems="center" border="1px solid lightgray" >
-              <SearchIcon boxSize="18px" pos="absolute"/>
-              <Input variant='unstyled'  placeholder='Search for...'/>    
-              </Box>
-         
-    </Box>
     <Box  w="80%" >
-        <Text mb="10px">
-            THERE ARE NO PRODUCTS ON YOUR WISHLIST.
-        </Text  >
+    <Box boxShadow='base' p='6' rounded='md' bg='white'  mt="20px"  display='flex' w="100%">
+    
+    <Box textAlign='center' w={['100%','100%','100%']} border="px solid red">
+            <SimpleGrid border="px solid red" 
+                 columns={[1,2,3]} 
+                 spacing='20px'>
+                     {
+            wish.length && wish.map((item)=>{
+            return(
+                    <Box p="50px" m="50px" align="center" borderRadius="5%" boxShadow="dark-lg" key={item.id}>
+                     
+                      <Text paddingLeft="5px" color="gray">{item.title}</Text>
+                      <Image 
+                      borderRadius='10px'
+                      bgColor="white"
+                      w="50%" 
+                      h="50%"
+                      src={item.image} 
+                      />
+                      <Text fontSize="18px" color="black">{item.category}</Text>
+                      {/* <Text color="gray">{item.description}</Text> */}
+                     <Text fontWeight='bold' color="black">{item.price}</Text>
+                     <Box display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
+                      <Button >Proceed to checkout</Button>
+                     
+                     </Box>
+                     </Box>
+                           )
+                          })}
+               
+                </SimpleGrid>
+                
+           
+    </Box>
+    </Box>
         <Text color="gray" mb="10px" >
             Check out our new arrivals and start adding to your wishlist now!
         </Text>
