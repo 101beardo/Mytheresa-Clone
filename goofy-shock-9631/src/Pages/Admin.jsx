@@ -13,7 +13,7 @@ const Admin = () => {
 
   useEffect(()=>{
     
-      disapatch(getData())
+      disapatch(getData)
     
   },[data.length,disapatch])
 

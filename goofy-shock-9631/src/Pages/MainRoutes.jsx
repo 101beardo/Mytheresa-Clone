@@ -14,6 +14,7 @@ import LoginRegister from '../Components/Login_Register'
 import Login from '../Components/Login'
 import Cart from './Cart'
 import Add from './Add'
+import SinglePage from './SinglePage';
 
 const MainRoutes = () => {
   return (
@@ -23,6 +24,8 @@ const MainRoutes = () => {
       <Routes>
         <Route path='/arrival' element={<Arrival/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path="/product/:id" element={<SinglePage />} />
+
         <Route path='/login' element={<LoginRegister/>}/>
         <Route path='/logini' element={<Login/>}/>
         <Route path='/mens' element={<Mens/>}/>

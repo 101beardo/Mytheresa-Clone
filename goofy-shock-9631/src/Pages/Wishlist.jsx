@@ -11,7 +11,7 @@ const Wishlist = () => {
 
     useEffect(()=>{
       
-        dispatch(getWishData())
+        dispatch(getWishData)
       
     },[wish.length,dispatch])
     console.log(wish)

@@ -1,20 +1,25 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import {
-    // useDisclosure,
-    // MenuItem,
-    // Menu,
-    // MenuButton,
-    // MenuList,
-    // useColorModeValue,
-    Link,
     Box,
-    Input
+    Image,
+    Input,
+    Button
 } from "@chakra-ui/react"
-import { useNavigate } from "react-router-dom"
-
+import { useState } from "react";
+import { useNavigate,Link } from "react-router-dom"
+import { useSelector } from "react-redux";
 
  function Dropdown() {
+    const [value,setValue]=useState("")
     const navigate=useNavigate();
+    const data=useSelector((store)=>store.AppReducer.data);
+    const onChange=(e)=>{
+        setValue(e.target.value)
+
+    }  
+    const onSearch=(searchTerm)=>{
+        setValue(searchTerm)
+    }
     // const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Box  mb="10px" align="center">
@@ -43,8 +48,38 @@ import { useNavigate } from "react-router-dom"
       
                 <Box fontSize={['12px']} mr="60px" p="10px"  w="18%" display="flex" justifyContent="right" alignItems="center" border="1px solid lightgray" >
                 <SearchIcon boxSize="18px" pos="absolute"/>
-                <Input variant='unstyled'  placeholder='Search for...'/>    
+                <Input value={value} onChange={onChange} variant='unstyled'  placeholder='Search for...'/>    
+                <Button display="none" onClick={()=>onSearch(value)}></Button>
+                <Box>
+            {data.filter(item=>{
+              const searchTerm=value.toLowerCase();
+              const fullname=item.pa1.toLowerCase();
+              return searchTerm && fullname.startsWith(searchTerm) &&
+              fullname!==searchTerm
+            }).slice(0,5)
+            .map((item)=>(
+              (
+               <Link to={`/product/${item.id}`}><Box  
+                onClick={()=>onSearch(item.pa1)} 
+                bgColor="white"
+                className='dropdown-row' 
+                cursor='pointer'
+                textAlign='start'
+                margin="2px 0"
+                key={item.price}>
+                  {item.pa1}
+                 <Box display='flex'
+                 justifyContent="space-between">
+                  <Image bgColor="grey" width="10%" src={item.lazyloaded}/>
+                 </Box>
                 </Box>
+                </Link> 
+                )
+            ))}
+          </Box>
+          </Box>
+
+                
            
       </Box>
       <hr /> 
@@ -55,47 +90,3 @@ import { useNavigate } from "react-router-dom"
 export default Dropdown
 
 
-// import {
-//     useDisclosure,
-//     MenuItem,
-//     Menu,
-//     MenuButton,
-//     MenuList,
-//     useColorModeValue,
-//     Link
-// } from "@chakra-ui/react"
-// import { useNavigate } from "react-router-dom"
-
-
-// export default function Navbar() {
-//     const navigate=useNavigate();
-//     const { isOpen, onOpen, onClose } = useDisclosure()
-//     return (
-//         <Menu isOpen={isOpen}>
-//             <MenuButton
-//                 variant="ghost"
-//                 mx={1}
-//                 py={[1, 2, 2]}
-//                 px={4}
-//                 borderRadius={5}
-//                 // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
-                
-//                 onMouseEnter={onOpen}
-//                 onMouseLeave={onClose}>
-//                 NEW ARRIVALS
-               
-//             </MenuButton>
-//             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
-//                 <MenuItem>Menu Item 1</MenuItem>
-//                 <MenuItem>Menu Item 2</MenuItem>
-//                 <MenuItem>Menu Item 3</MenuItem>
-//                 <MenuItem>Menu Item 1</MenuItem>
-//                 <MenuItem>Menu Item 2</MenuItem>
-//                 <MenuItem>Menu Item 3</MenuItem>
-//             </MenuList>
-            
-            
-//         </Menu>
-        
-//     )
-// }
