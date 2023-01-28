@@ -2,17 +2,19 @@ import { SearchIcon } from "@chakra-ui/icons";
 import {
     Box,
     Image,
+     Link,
     Input,
     Button
 } from "@chakra-ui/react"
 import { useState } from "react";
-import { useNavigate,Link } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 import { useSelector } from "react-redux";
 
  function Dropdown() {
     const [value,setValue]=useState("")
     const navigate=useNavigate();
     const data=useSelector((store)=>store.AppReducer.data);
+    // console.log(data,"datalength");
     const onChange=(e)=>{
         setValue(e.target.value)
 
@@ -59,7 +61,9 @@ import { useSelector } from "react-redux";
             }).slice(0,5)
             .map((item)=>(
               (
-               <Link to={`/product/${item.id}`}><Box  
+               <Link onClick={()=>{navigate(`/product/${item.id}`)}}>
+                <Box  
+                
                 onClick={()=>onSearch(item.pa1)} 
                 bgColor="white"
                 className='dropdown-row' 
@@ -70,7 +74,7 @@ import { useSelector } from "react-redux";
                   {item.pa1}
                  <Box display='flex'
                  justifyContent="space-between">
-                  <Image bgColor="grey" width="10%" src={item.lazyloaded}/>
+                  <Image bgColor="grey" width="20%" src={item.lazyloaded}/>
                  </Box>
                 </Box>
                 </Link> 

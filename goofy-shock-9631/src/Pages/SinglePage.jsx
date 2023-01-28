@@ -13,7 +13,7 @@ const SinglePage=()=>{
     const navigate=useNavigate()
 
    useEffect(()=>{
-    dispatch(getdata())
+    dispatch(getdata)
     },[])
 
    useEffect(()=>{
@@ -43,10 +43,10 @@ const SinglePage=()=>{
         </Box>
        </Box>
        <Box w="50%" border="px solid red">
-        <Text mt="5px" ml="10px" fontSize="18px" color="rgb(153, 153, 153)">{currentProduct?.pa1}</Text>
-        <Text ml="5px" fontWeight="700" color="rgb(35,187,117)">{currentProduct?.category}% off</Text> 
+        <Text mt="5px" ml="10px" fontSize="18px" color="rgb(153, 153, 153)">{currentProduct.pa1}</Text>
+        <Text ml="5px" fontWeight="700" color="rgb(35,187,117)">{currentProduct.category}% off</Text> 
         <Box display="flex" alignItems="center">
-                      <Text ml="10px" color="black" fontSize="27px" fontWeight="700" >₹{currentProduct?.price}</Text>
+                      <Text ml="10px" color="black" fontSize="27px" fontWeight="700" >₹{currentProduct.price}</Text>
                       {/* <del style={{display:"inline", marginLeft:"5px",  color:"rgb(153, 153, 153)"}}>₹{currentProduct?.original_price}</del>  */}
 
                       </Box>
