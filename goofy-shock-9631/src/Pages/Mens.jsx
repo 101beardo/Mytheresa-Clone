@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Mens = () => {
-  const navigate=useNavigate
+  const navigate=useNavigate()
   return (
     // border="1px solid red"
     <Box  mb="10px" align="center">
@@ -53,7 +53,7 @@ const Mens = () => {
                     <Container  fontSize={["16px","26px","56px"]}>
                         Smart looks
                     </Container>
-                    <Button size={['xs','md','lg']} mt="10px" color="black">
+                    <Button size={['xs','md','lg']} mt="10px" color="black" onClick={() => navigate('/arrival')}>
                         SHOP NOW {`>>`}
                     </Button>
             </Box>
@@ -68,7 +68,7 @@ const Mens = () => {
                     <Text mb="40px" display={["none","none","flex"]} fontSize={["10px","16px","16px"]}>
                         The temperature may rise and fall but style is constant
                     </Text>
-                    <Button display={["none","flex","flex"]} size={['xs','md','lg']} mt="10px" color="black">
+                    <Button onClick={() => navigate('/arrival')} display={["none","flex","flex"]} size={['xs','md','lg']} mt="10px" color="black">
                         SHOP NOW {`>>`}
                     </Button>
             </Box>
@@ -83,7 +83,7 @@ const Mens = () => {
                     <Text mb="40px" display={["none","none","flex"]} fontSize={["10px","16px","16px"]}>
                         Starts now - up to 50% off
                     </Text>
-                    <Button display={["none","flex","flex"]} size={['xs','md','lg']} mt="10px" color="black">
+                    <Button onClick={() => navigate('/arrival')} display={["none","flex","flex"]} size={['xs','md','lg']} mt="10px" color="black">
                         SHOP SALE {`>>`}
                     </Button>
             </Box>

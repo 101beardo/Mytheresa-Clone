@@ -7,8 +7,10 @@ import {
     SimpleGrid,
     Text,
   } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
   
   export default function Life() {
+    const navigate = useNavigate()
     return (
       <>
         <Box
@@ -30,7 +32,7 @@ import {
             <Container fontSize={["16px", "26px", "56px"]} textAlign="center">
               Festive Home Decor
             </Container>
-            <Button size={["xs", "md", "lg"]} mt="10px" color="black" display="block" m="auto">
+            <Button size={["xs", "md", "lg"]} mt="10px" color="black" display="block" m="auto" onClick={() => navigate('/arrival')}>
               SHOP NOW {`>>`}
             </Button>
           </Box>
@@ -75,6 +77,7 @@ import {
               display="block"
               m="auto"
               mt="40px"
+              onClick={() => navigate('/arrival')}
             >
               SHOP NOW {`>>`}
             </Button>
@@ -103,6 +106,7 @@ import {
                 display="block"
                 m="auto"
                 mt="40px"
+                onClick={() => navigate('/arrival')}
               >
                 SHOP NOW {`>>`}
               </Button>
@@ -138,6 +142,7 @@ import {
                 display="block"
                 m="auto"
                 mt="40px"
+                onClick={() => navigate('/arrival')}
               >
                 SHOP NOW {`>>`}
               </Button>
@@ -200,6 +205,7 @@ import {
               display="block"
               m="auto"
               mt="40px"
+              onClick={() => navigate('/arrival')}
             >
               SHOP NOW {`>>`}
             </Button>
