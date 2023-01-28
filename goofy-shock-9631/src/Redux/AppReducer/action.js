@@ -17,16 +17,16 @@ const getDataError=()=>{
     }
 }
 
-const getdata=(dispatch)=>{
+ const getdata=(params)=>(dispatch)=>{
     dispatch(getDataRequest());
-    return axios.get('http://localhost:8080/mens')
+    axios.get('http://localhost:8080/mens',params)
     .then((res)=>dispatch(getDataSuccess(res.data)))
     .catch((error)=>{
         dispatch(getDataError(error))
     }) 
 }
 
-const getData=()=>(dispatch)=>{
+const getData=(dispatch)=>{
     dispatch(getDataRequest());
     return axios.get('http://localhost:8080/admin')
     .then((res)=>dispatch(getDataSuccess(res.data)))
@@ -57,7 +57,7 @@ const getWishDataError=()=>{
 }
 
 
-const getWishData=()=>(dispatch)=>{
+const getWishData=(dispatch)=>{
     dispatch(getWishDataRequest());
     return axios.get('http://localhost:8080/wish')
     .then((res)=>dispatch(getWishDataSuccess(res.data)))
@@ -99,7 +99,7 @@ const getCartDataError=()=>{
 }
 
 
-const getCartData=()=>(dispatch)=>{
+const getCartData=(dispatch)=>{
     dispatch(getCartDataRequest());
     return axios.get('http://localhost:8080/wish')
     .then((res)=>dispatch(getCartDataSuccess(res.data)))
