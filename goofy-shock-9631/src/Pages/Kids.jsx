@@ -6,39 +6,7 @@ export const Kids = () => {
     const navigate = useNavigate()
   return (
     <Box id="kids">
-    {/* <Box id="kidsNavbar" display="flex" gap="12%" m="auto" >
-    <Box display="flex"
-        gap="25px"
-        justifyContent="center" 
-        alignItems="center"
-        fontSize="13px"
-        font-weight="400"
-        text-transform="uppercase"
-        ml="10%"
-        >
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>NEW ARRIVALS</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>DESIGNERS</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>GIRLS</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>BOYS</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>BABY</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>SHOES</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>WINTER SHOP</Text>
-       <Text  _hover={{opacity:"0.5", cursor: "pointer"}}>FESTIVE SEASON</Text>
-       <Text color="red" _hover={{opacity:"0.5", cursor: "pointer"}}>SALE</Text>
-   </Box>
-   <Box>
-     <Input placeholder='Search for...' w="100%" border="2px solid black"/>
-   </Box>   
-  </Box> */}
     <Box id="kids_page">
-    <Box
-          border="0px"
-          borderTop="2px"
-          borderColor="gray.200"
-          width="100%"
-          m="auto"
-          mt="35px"
-        ></Box>
     <Box display={["block","flex","flex"]} padding="0 5%" gap="1%" mt="50px">
         <Box display="flex" justifyContent="center" alignItems="center" m="auto" boxSize={["80%","44%","44%"]} >
         <Image w="100%" src='https://img.mytheresa.com/media/static/raw/cms/l/KW_FO_2022_December/Kids_Homepage_Festive_BigSplit_GIRL_DSK_2x_20221130170827.jpg?imwidth=1180&imdensity=1' alt='image 1' />
