@@ -11,7 +11,7 @@ import Wishlist from './Wishlist'
 import WomenPage from './WomenPage';
 import Arrival from '../Components/Arrival'
 import LoginRegister from '../Components/Login_Register'
-import Login from '../Components/Login'
+//import Login from '../Components/Login'
 import Cart from './Cart'
 import Add from './Add'
 import SinglePage from './SinglePage';
@@ -25,9 +25,8 @@ const MainRoutes = () => {
         <Route path='/arrival' element={<Arrival/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path="/product/:id" element={<SinglePage />} />
-
         <Route path='/login' element={<LoginRegister/>}/>
-        <Route path='/logini' element={<Login/>}/>
+        {/* <Route path='/logini' element={<Login/>}/> */}
         <Route path='/mens' element={<Mens/>}/>
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/kids' element={<Kids/>}/>

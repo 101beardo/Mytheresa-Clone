@@ -5,13 +5,17 @@ import {useEffect,useState} from "react";
 import {getdata } from '../Redux/AppReducer/action';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const SinglePage=()=>{
   const{id}=useParams();
   const data=useSelector((store)=>store.AppReducer.data);
     const [currentProduct,setCurrentProduct]=useState({})
     const dispatch=useDispatch();
     const navigate=useNavigate()
-
+    // const notifySuccess = (res)=>{toast.success(res)};
+    // notifySuccess("Item deleted from Cart")
    useEffect(()=>{
     dispatch(getdata)
     },[])
@@ -31,20 +35,20 @@ const SinglePage=()=>{
   return (
     <>
      <Box display={["block","","flex","flex"]} pt="40px" w="75%" m="auto" mt="7%" border="px solid red">
-       <Box w="50%" border="px solid red">
-          <Image border="px solid red" display="block" m="auto" src={currentProduct?.lazyloaded} />
+       <Box w={["","100%","","50%"]} border="px solid red" m={["auto","auto","","none"]}>
+          <Image border="px solid red" display="block" m="auto" src={currentProduct.lazyloaded} />
         <Box  display={["grid","","","flex"]} gap={["10px","","",""]} w="70%" m="auto" mt="20%" border="px solid red">
-       <Button  w={["82%","","","95%"]} fontSize={["20px","","","20px"]} border="1px solid black" _hover={{bgColor:'white'}} bgColor="white" >{`🛒`}Add To Cart</Button> 
-        <Button  w={["82%","","","50%"]} fontSize={["20px","","","20px"]}  bgColor="black" color="white" _hover={{bgColor:'black'}}>{`>>`}Buy Now</Button>
+       <Button  w={["115px","","","95%"]} fontSize={["16px","","","20px"]} border="1px solid black" _hover={{bgColor:'white'}} bgColor="white" >{`🛒`}Add To Cart</Button> 
+        <Button  w={["115px","","","50%"]} fontSize={["20px","","","20px"]}  bgColor="black" color="white" _hover={{bgColor:'black'}}>{`>>`}Buy Now</Button>
         </Box>
         <Box  display={["flex","","","flex"]} gap="10px" justifyContent="center">
-        <Image  w={["25%","","","10%"]} m="right" mt="5%" src={currentProduct.lazyloaded}/>
-        <Image w={["25%","","","10%"]} m="right" mt="5%" src={currentProduct.lazyloaded}/>
+        <Image  w={["15%","","","10%"]} m="right" mt="5%" src={currentProduct.lazyloaded}/>
+        <Image w={["15%","","","10%"]} m="right" mt="5%" src={currentProduct.lazyloaded}/>
         </Box>
        </Box>
-       <Box w="50%" border="px solid red">
+       <Box ml={["","","4%","4%"]} w={["","100%","","50%"]}  border="px solid red">
         <Text mt="5px" ml="10px" fontSize="18px" color="rgb(153, 153, 153)">{currentProduct.pa1}</Text>
-        <Text ml="5px" fontWeight="700" color="rgb(35,187,117)">{currentProduct.category}% off</Text> 
+        <Text ml="9px" fontWeight="700" color="rgb(35,187,117)">{currentProduct.category}</Text> 
         <Box display="flex" alignItems="center">
                       <Text ml="10px" color="black" fontSize="27px" fontWeight="700" >₹{currentProduct.price}</Text>
                       {/* <del style={{display:"inline", marginLeft:"5px",  color:"rgb(153, 153, 153)"}}>₹{currentProduct?.original_price}</del>  */}
