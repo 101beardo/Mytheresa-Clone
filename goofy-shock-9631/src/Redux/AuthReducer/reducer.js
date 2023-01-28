@@ -1,24 +1,54 @@
 
-import * as types from "./actionTypes"
+import { GET_DATA, LOGOUT } from "../AuthReducer/actionTypes";
+import { FILTER_DATA } from '../AuthReducer/actionTypes'
+import { USER_EMAIL} from '../AuthReducer/actionTypes';
 
-const initialState={
+const initState = {
+    pages : [],
+    sorted : [],
+    email : "",
     isAuth:false,
-    token:"",
-    isAuthLoading:false,
-    isAuthError:false
 }
 
-const reducer=(oldState=initialState,action)=>{
-    const {type,payload}=action
-    switch(type){
-        case types.USER_LOGIN_REQUEST:
-            return{...oldState,isAuthLoading:true}
-        case types.USER_LOGIN_SUCCESS:
-            return{...oldState,isAuthLoading:false,token:payload,isAuth:true}
-        case types.USER_LOGIN_ERROR:
-            return {...oldState,isAuthLoading:false,isAuthError:true}
+const reducer = ( store = initState , {type , payload}) =>{
+    switch (type) {
+        case GET_DATA : {
+                return { 
+                    ...store , pages : payload ,
+                     sorted : payload,
+
+                 }
+        }
+
+        case FILTER_DATA : {
+            if( payload == ""){
+                return  { ...store , sorted : store.pages , isAuth:false }
+            }
+            
+            const filter = store.pages.filter( a =>{
+                return a.type == payload
+            });
+            console.log(filter, "filter")
+            return { ...store , sorted : filter,
+            isAuth:false }
+        }
+
+        case USER_EMAIL : {
+                return { ...store , 
+                    email : payload,
+                    isAuth:true,
+                 }
+        }
+         case LOGOUT:{
+            return{
+                ...store,
+                email:payload,
+                isAuth:false,
+            }
+         }   
         default:
-            return oldState
+            return store;
     }
 }
-export {reducer}
+
+export {reducer};

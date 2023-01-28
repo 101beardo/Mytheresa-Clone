@@ -1,13 +1,25 @@
-import axios from "axios"
-import * as types from "./actionTypes"
+import { GET_DATA, LOGOUT, USER_EMAIL} from '../AuthReducer/actionTypes';
+import { FILTER_DATA } from '../AuthReducer/actionTypes'
 
 
-const login=(payload)=>dispatch=>{
-    dispatch({type:types.USER_LOGIN_REQUEST})
-    // return here is used because of thunk usage we need return to get back to same line of code execution and continue .then otherwise it won't return back to line of code execution and .then will be reading undefined value
-    return axios.post("https://reqres.in/api/login",payload)
-    .then(r=>dispatch({type:types.USER_LOGIN_SUCCESS,payload:r.data.token}))
-    .catch(e=>dispatch({type:types.USER_LOGIN_ERROR}))
+export const getData = (payload) =>{
+    return {
+        type : GET_DATA,
+        payload : payload
+    }
 }
 
-export {login};
+export const filterData = (payload) =>{
+    return {
+        type : FILTER_DATA,
+        payload : payload
+    }
+}
+
+export const userEmail = (payload) =>{
+    return {
+        type : USER_EMAIL,
+        payload : payload
+    }
+}
+export const logout = () => ({ type: LOGOUT });
