@@ -101,7 +101,7 @@ const getCartDataError=()=>{
 
 const getCartData=()=>(dispatch)=>{
     dispatch(getCartDataRequest());
-    return axios.get('http://localhost:8080/wish')
+    return axios.get('http://localhost:8080/bag')
     .then((res)=>dispatch(getCartDataSuccess(res.data)))
     .catch((error)=>{
         dispatch(getCartDataError(error))
@@ -158,7 +158,19 @@ const deleteData=(id)=>(dispatch)=>{
     })
 }
 
+const deleteCartData=(id)=>(dispatch)=>{
+    dispatch({type:types.DELETE_CART_DATA_REQUEST})
+    return axios
+    .delete(`http://localhost:8080/bag/${id}`)
+    .then((r)=>{
+        dispatch({type:types.DELETE_CART_DATA_SUCCESS,payload:id})
+    })
+    .catch((e)=>{
+        dispatch({type:types.DELETE_CART_DATA_ERROR})
+    })
+}
 
 
 
-export {addData,getWishData,addWishData,getData,getdata,getCartData,addCartData,updateData,deleteData}
+
+export {addData,deleteCartData,getWishData,addWishData,getData,getdata,getCartData,addCartData,updateData,deleteData}

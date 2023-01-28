@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router'
 import { useSelector } from 'react-redux'
 import { store } from '../Redux/store'
 import { AiOutlineUser } from 'react-icons/ai'
+import {HiOutlineShoppingBag} from 'react-icons/hi'
 
 
 
@@ -14,12 +15,12 @@ const Navbar = () => {
   const isAuth=useSelector(store=>store.AuthReducer.isAuth)
   // console.log(isAuth)
      // border="1px solid red"
-
+     
   const { isOpen, onToggle } = useDisclosure()
   const navigate=useNavigate()
 
   return (
-   <Box mb="50px"  align="center" >
+   <Box mb="50px"   align="center" >
       <Box 
           mb="40px"
           w="100%" 
@@ -27,7 +28,7 @@ const Navbar = () => {
           p="20px"
           display={["none","none","flex"]}
           justifyContent="space-between"
-        //   position={"fixed"}
+          // position={"fixed"}
           zIndex={1}
           >
           <Box  w="25%" display="flex" justifyContent="space-evenly" >
@@ -46,127 +47,11 @@ const Navbar = () => {
                 {isAuth ? <Box display="flex" > <Link mr="10px" style={{ textDecoration: 'none' }}  onClick={() => {}} >Logout</Link> <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/admin`)}}><Icon as={AiOutlineUser}/>  </Link></Box> : <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/logini`)}}>Login</Link>}
           </Box>
           </Box>
-     
-
-
-      
-          {/* <Link style={{ textDecoration: "none" }} onClick={onOpen}>
-            Malaysia | English
-          </Link>
-
-                <Link style={{ textDecoration: "none" }} onClick={onOpen}> Malaysia | English</Link>
-
-
-          <Modal
-            isOpen={isOpen}
-            onClose={onClose}
-            size="xl"
-            borderBottomRadius="0"
-            display={["none", "none", "flex"]}
-          >
-            <ModalOverlay />
-            <ModalContent>
-              <Box bg="#F2F2F2" pb="20px">
-                <ModalHeader
-                  m="auto"
-                  fontWeight="light"
-                  fontSize="md"
-                  textAlign="center"
-                  mb="25px"
-                >
-                  PLEASE CHOOSE THE DESTINATION OF DELIVERY.
-                </ModalHeader>
-                <ModalCloseButton />
-                <ModalBody>
-                  <Box display="flex" gap="5%">
-                    <Box width="30%">
-                      <Text as="h4" fontSize="sm">
-                        YOUR REGION
-                      </Text>
-                      <Select
-                        variant="outline"
-                        placeholder="Asia"
-                        htmlSize={4}
-                        width="auto"
-                        mt="3px"
-                      >
-                        <option>Please choose...</option>
-                        <option>All</option>
-                        <option>Africa</option>
-                        <option>Europe</option>
-                        <option>Latin America</option>
-                        <option>North America</option>
-                        <option>Oceania</option>
-                      </Select>
-                    </Box>
-                    <Box height="80%" width="45%">
-                      <Text as="h4" fontSize="sm">
-                        YOUR DELIVERY DESTINATION
-                      </Text>
-                      <Select
-                        variant="outline"
-                        placeholder="India"
-                        htmlSize={4}
-                        width="auto"
-                        mt="3px"
-                      >
-                        <option>Please choose...</option>
-                        <option>Azerbaijan</option>
-                        <option>Bahrain</option>
-                        <option>Bangladesh</option>
-                        <option>Bhutan</option>
-                        <option>Brunei</option>
-                        <option>China</option>
-                        <option>Georgia</option>
-                        <option>Hong Kong</option>
-                        <option>Indonesia</option>
-                        <option>Israel</option>
-                        <option>Japan</option>
-                        <option>Japan</option>
-                      </Select>
-                    </Box>
-                    <Box height="80%" width="30%">
-                      <Text as="h4" fontSize="sm">
-                        YOUR LANGUAGE
-                      </Text>
-                      <Select
-                        variant="outline"
-                        placeholder="English"
-                        htmlSize={4}
-                        width="auto"
-                        mt="3px"
-                      >
-                        <option>Please choose a language</option>
-                      </Select>
-                    </Box>
-                  </Box>
-                  <Button
-                    color="white"
-                    bg="black"
-                    display="block"
-                    m="auto"
-                    mt="30px"
-                  >
-                    CONTINUE SHOPPING
-                  </Button>
-                </ModalBody>
-              </Box>
-
-              <ModalFooter pb="30px">
-                <Text as="p" textAlign="center">
-                  Please note: the items in your shopping bag may be deleted if
-                  you change your region or your delivery destination.
-                </Text>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
-          </Box> 
-        </Box> */}
         <Box w="100%" 
           h="70px" 
           p="20px"
           display={["flex","flex","none"]}
-          position={"fixed"}
+          // position={"fixed"}
           fontSize='20px'
           bgColor="white"
           zIndex={99999}
@@ -177,7 +62,7 @@ const Navbar = () => {
                         <Collapse in={isOpen} animateOpacity>
                                 <Box
                                     p='90px'
-                                    mt='4'
+                                    mt='0px'
                                     bg='white'
                                     rounded='md'
                                     shadow='dark-lg'
@@ -199,7 +84,24 @@ const Navbar = () => {
                     </Box>
           
         </Box>
-      <Image  mt="30px"  w="22%" src='https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20221130T110112'/>
+    
+      
+      <Box>
+        <Image style={{cursor:"pointer"}} mt="30px" onClick={()=>{navigate(`/womens`)}}  w="22%" src='https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20221130T110112'/>
+      </Box>
+      
+
+      
+      <Box w={["90%"]}>
+        <Box onClick={()=>{navigate(`/cart`)}} style={{cursor:"pointer"}} ml="89%" display={"flex"} >
+          <Text mt="6%" >Shopping Bag</Text>
+          <Icon boxSize={["40px"]} as={HiOutlineShoppingBag}/>
+        </Box>
+      </Box>
+      
+    
+
+     
       
 </Box>
   

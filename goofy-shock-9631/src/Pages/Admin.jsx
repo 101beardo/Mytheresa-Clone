@@ -7,15 +7,15 @@ import { store } from '../Redux/store'
 
 const Admin = () => {
   const data=useSelector(store=>store.AppReducer.data)
-  const disapatch=useDispatch()
+  const dispatch=useDispatch()
   const navigate=useNavigate()
 
 
   useEffect(()=>{
     
-      disapatch(getData())
+      dispatch(getData())
     
-  },[data.length,disapatch])
+  },[data.length,dispatch])
 
 
 
@@ -53,7 +53,7 @@ const Admin = () => {
                      <Text fontWeight='bold' color="black">{item.price}</Text>
                      <Box display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
                       <Button >Edit</Button>
-                      <Button onClick={()=>{disapatch(deleteData(item.id))}} >Delete</Button>
+                      <Button onClick={()=>{dispatch(deleteData(item.id))}} >Delete</Button>
                      </Box>
                      </Box>
                            )

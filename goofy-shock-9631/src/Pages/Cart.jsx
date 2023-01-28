@@ -1,14 +1,17 @@
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartData } from '../Redux/AppReducer/action';
+import { deleteCartData, getCartData } from '../Redux/AppReducer/action';
 import { Box,Button,GridItem,Image,Select,SimpleGrid, Text } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Cart = () => {
     const bag=useSelector((store)=>store.AppReducer.bag);
     const dispatch=useDispatch()
+    const navigate=useNavigate()
+    const [total, settotal] = useState(0);
 
 
     useEffect(()=>{
@@ -16,44 +19,62 @@ const Cart = () => {
         dispatch(getCartData())
       
     },[bag.length,dispatch])
-    console.log(bag)
-  
-  return (
-    <Box boxShadow='base' p='6' rounded='md' bg='white'  mt="20px"  display='flex' w="100%">
     
-    <Box textAlign='center' w={['100%','100%','100%']} border="px solid red">
-            <SimpleGrid border="px solid red" 
-                 columns={[1,2,3]} 
-                 spacing='20px'>
-                     {
+
+    const handleTotal = () => {
+      let Total = 0;
+      bag.map((ele) => {
+        Total += Math.floor(ele.price);
+      });
+      settotal(Total);
+    };
+    useEffect(() => {
+      handleTotal();
+    }, [bag]);
+
+
+
+ 
+  return (
+    
+    
+      <Box align="center" >
+            {
             bag.length && bag.map((item)=>{
             return(
-                    <Box p="50px" m="50px" align="center" borderRadius="5%" boxShadow="dark-lg" key={item.id}>
-                     
-                      <Text paddingLeft="5px" color="gray">{item.title}</Text>
-                      <Image 
-                      borderRadius='10px'
-                      bgColor="white"
-                      w="50%" 
-                      h="50%"
-                      src={item.image} 
-                      />
-                      <Text fontSize="18px" color="black">{item.category}</Text>
-                      {/* <Text color="gray">{item.description}</Text> */}
-                     <Text fontWeight='bold' color="black">{item.price}</Text>
-                     <Box display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
-                      <Button >Proceed to checkout</Button>
-                     
-                     </Box>
-                     </Box>
-                           )
-                          })}
-               
-                </SimpleGrid>
+              <Box p="50px" w="90%" display={"flex"}  border={"1px solid gray"} key={item.id}>
+                <Box  w="100%" >  
+
+                <Text  color="black">{item.description}</Text>
+
+                <Text paddingLeft="5px" color="gray">{item.title}</Text>
+              
+                <Text fontSize="18px" color="black">{item.category}</Text>
+             
+                <Text fontWeight='bold' color="black">{`Price : ${item.price}`}</Text>
                 
-           
-    </Box>
-    </Box>
+                <Button onClick={()=>{dispatch(deleteCartData(item.id))}} >Delete</Button>
+                
+                </Box>
+
+                <Box boxSize={["80px","90px","140px"]} >
+              
+                  <Image 
+                  borderRadius='10px'
+                  bgColor="white"
+                  h="100%"
+                  src={item.image} 
+                  />
+                </Box>
+            
+             </Box>
+            )
+          })} 
+          <Box w="90%" fontWeight='bold' align="end" >
+            Total Price : {total}
+          </Box>
+          <Button m="20px" onClick={()=>{navigate(`/checkout`)}} >Proceed to checkout</Button>      
+      </Box>
   )
 }
 

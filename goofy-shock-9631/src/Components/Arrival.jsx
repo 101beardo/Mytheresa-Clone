@@ -61,22 +61,27 @@ const handleWish=(payload)=>{
                      {
             data?.length && data.map((item)=>{
             return(
-                    <Box p="50px" m="50px" align="center" borderRadius="5%" boxShadow="dark-lg" key={item.id}>
-                     
-                      <Text paddingLeft="5px" color="gray">{item.title}</Text>
+                    <Box p="50px" m="50px" align="center" borderRadius="5%"  boxShadow="dark-lg" key={item.id}>
+                     <Box h="35%" >
+                      <Text  paddingLeft="5px" color="gray">{item.title}</Text>
+                     </Box>
+                     <Box>
+                     <Box boxSize={["80px","90px","140px"]} >
                       <Image 
                       borderRadius='10px'
                       bgColor="white"
-                      w="50%" 
-                      h="50%"
+                      // w="50%" 
+                      h="100%"
                       src={item.image} 
                       />
+                      </Box>
                       <Text fontSize="18px" color="black">{item.category}</Text>
                       {/* <Text color="gray">{item.description}</Text> */}
                      <Text fontWeight='bold' color="black">{item.price}</Text>
-                     <Box w="100%" display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
-                      <Button fontSize={"10px"} onClick={()=>{handleCart(item)}}>ADD TO CART</Button>
-                     <Button fontSize={"10px"}  onClick={()=>{handleWish(item)}} >ADD TO WISHLIST</Button>
+                     <Box  w="100%" mb="20px"  display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
+                      <Button mx="5px" fontSize={"10px"} onClick={()=>{handleCart(item)}}>ADD TO CART</Button>
+                     <Button mx="5px" fontSize={"10px"}  onClick={()=>{handleWish(item)}} >ADD TO WISHLIST</Button>
+                     </Box>
                      </Box>
                      </Box>
                            )

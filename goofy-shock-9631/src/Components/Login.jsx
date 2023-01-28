@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Box, Text, Input, Button} from '@chakra-ui/react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../Redux/AuthReducer/action';
 
 const Login = () => {
+  // const isAuthError=useSelector(store=>store.AuthReducer.isAuthError)
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const dispatch=useDispatch()
   const navigate=useNavigate()
-
 
 
   const handleSubmit=()=>{
@@ -18,6 +18,9 @@ const Login = () => {
       dispatch(login({email,password})).then(r=>{
         navigate("/womens")
       })
+    }
+    else{
+      alert("Wrong Credentials")
     }
   }
   return (

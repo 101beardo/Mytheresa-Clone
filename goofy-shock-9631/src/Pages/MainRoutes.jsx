@@ -14,6 +14,7 @@ import LoginRegister from '../Components/Login_Register'
 import Login from '../Components/Login'
 import Cart from './Cart'
 import Add from './Add'
+import Checkout from './Checkout'
 
 const MainRoutes = () => {
   return (
@@ -31,6 +32,7 @@ const MainRoutes = () => {
         <Route path='/womens' element={<WomenPage/>}/>
         <Route path='/life' element={<Life/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/add' element={<Add/>}/>
       </Routes>
       <Footer/>

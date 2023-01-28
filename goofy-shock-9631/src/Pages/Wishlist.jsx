@@ -29,24 +29,27 @@ const Wishlist = () => {
                      {
             wish.length && wish.map((item)=>{
             return(
-                    <Box p="50px" m="50px" align="center" borderRadius="5%" boxShadow="dark-lg" key={item.id}>
+              <Box p="50px" m="50px" align="center" borderRadius="5%" boxShadow="dark-lg" key={item.id}>
                      
-                      <Text paddingLeft="5px" color="gray">{item.title}</Text>
-                      <Image 
-                      borderRadius='10px'
-                      bgColor="white"
-                      w="50%" 
-                      h="50%"
-                      src={item.image} 
-                      />
-                      <Text fontSize="18px" color="black">{item.category}</Text>
-                      {/* <Text color="gray">{item.description}</Text> */}
-                     <Text fontWeight='bold' color="black">{item.price}</Text>
-                     <Box display={['block','block','flex']} justifyContent={["space-between","space-evenly",'space-between']}>
-                      <Button >Proceed to checkout</Button>
-                     
-                     </Box>
-                     </Box>
+              <Text paddingLeft="5px" color="gray">{item.title}</Text>
+             <Box>
+             <Box mt="10%" boxSize={["80px","90px","140px"]} >
+              <Image 
+              borderRadius='10px'
+              bgColor="white"
+              // w="50%" 
+              h="100%"
+              src={item.image} 
+              />
+              </Box>
+              <Text fontSize="18px" color="black">{item.category}</Text>
+              {/* <Text color="gray">{item.description}</Text> */}
+             <Text fontWeight='bold' color="black">{item.price}</Text>
+             <Box  w="100%" >
+             <Button >Proceed to checkout</Button>
+             </Box>
+             </Box>
+             </Box>
                            )
                           })}
                

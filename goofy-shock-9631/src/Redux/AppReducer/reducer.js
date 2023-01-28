@@ -12,13 +12,13 @@ const reducer=(oldState=initialState,action)=>{
     const {type,payload}=action;
 
     switch(type){
+        // data
         case types.GET_DATA_REQUEST:
             return {...oldState,isLoading:true};
         case types.GET_DATA_SUCCESS:
             return {...oldState,isLoading:false,data:payload}
         case types.GET_DATA_ERROR:
             return {...oldState,isLoading:false,isError:true}
-
 
 
         case types.UPDATE_DATA_REQUEST:
@@ -47,7 +47,7 @@ const reducer=(oldState=initialState,action)=>{
         case types.DELETE_DATA_ERROR:
                 return {...oldState,isLoading:false,isError:true}
 
-
+        // bag
 
         case types.ADD_CART_DATA_REQUEST:
                     return {...oldState,isLoading:true}
@@ -64,6 +64,17 @@ const reducer=(oldState=initialState,action)=>{
         case types.GET_CART_DATA_ERROR:
                         return {...oldState,isLoading:false,isError:true}
 
+        
+        case types.DELETE_CART_DATA_REQUEST:
+                         return {...oldState,isLoading:true}
+        case types.DELETE_CART_DATA_SUCCESS:
+                        let filteredCartData=oldState.bag.filter((item)=>item.id!==payload)
+                        console.log("hi")
+                        return {...oldState,isLoading:false,bag:filteredCartData}
+        case types.DELETE_CART_DATA_ERROR:
+                        return {...oldState,isLoading:false,isError:true}
+
+        // wish
 
         case types.ADD_WISH_DATA_REQUEST:
                     return {...oldState,isLoading:true}
