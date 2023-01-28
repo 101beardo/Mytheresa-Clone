@@ -43,7 +43,7 @@ const Navbar = () => {
                 <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/wishlist`)}}>My wishlist</Link>
 
                 <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link>
-                {isAuth ? <Box display="flex" > <Link mr="10px" style={{ textDecoration: 'none' }}  onClick={() => {}} >Logout</Link> <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/admin`)}}><Icon as={AiOutlineUser}/>  </Link></Box> : <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/logini`)}}>Login</Link>}
+                {isAuth ? <Box display="flex" > <Link mr="10px" style={{ textDecoration: 'none' }}  onClick={() => {}} >Logout</Link> <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/admin`)}}><Icon as={AiOutlineUser}/>  </Link></Box> : <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/login`)}}>Login</Link>}
           </Box>
           </Box>
      
