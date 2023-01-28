@@ -52,7 +52,7 @@ import { useSelector } from "react-redux";
                 <SearchIcon boxSize="18px" pos="absolute"/>
                 <Input value={value} onChange={onChange} variant='unstyled'  placeholder='Search for...'/>    
                 <Button display="none" onClick={()=>onSearch(value)}></Button>
-                <Box>
+                <Box mt="180px">
             {data.filter(item=>{
               const searchTerm=value.toLowerCase();
               const fullname=item.pa1.toLowerCase();
@@ -72,8 +72,7 @@ import { useSelector } from "react-redux";
                 margin="2px 0"
                 key={item.price}>
                   {item.pa1}
-                 <Box display='flex'
-                 justifyContent="space-between">
+                 <Box>
                   <Image bgColor="grey" width="20%" src={item.lazyloaded}/>
                  </Box>
                 </Box>
