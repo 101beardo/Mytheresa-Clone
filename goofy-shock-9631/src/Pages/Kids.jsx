@@ -1,7 +1,9 @@
 import React from 'react'
 import { Image,Box,Container,Button,Text,Input} from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 export const Kids = () => {
+    const navigate = useNavigate()
   return (
     <Box id="kids">
     <Box id="kids_page">
@@ -12,7 +14,7 @@ export const Kids = () => {
             <Container textAlign="center" fontSize={["15px", "20px", "55px"]}>
                 Girls
             </Container>
-            <Button color="black" size={['xs','md','lg']}>
+            <Button color="black" size={['xs','md','lg']} onClick={() => navigate('/arrival')}>
                 SHOP NOW {`>>`}
             </Button>
             </Box>
@@ -23,7 +25,7 @@ export const Kids = () => {
             <Container textAlign="center" fontSize={["15px", "20px", "55px"]}>
                 Boys
             </Container>
-            <Button color="black" size={['xs','md','lg']}>
+            <Button color="black" size={['xs','md','lg']} onClick={() => navigate('/arrival')}>
                 SHOP NOW {`>>`}
             </Button>
             </Box>
@@ -35,13 +37,13 @@ export const Kids = () => {
             <Container  textAlign="center" fontSize={["15px", "20px", "55px"]}>
                 Baby
             </Container>
-            <Button color="white" backgroundColor="black" m="auto" size={['xs','md','lg']}>
+            <Button color="white" backgroundColor="black" m="auto" size={['xs','md','lg']} onClick={() => navigate('/arrival')}>
                 SHOP NOW {`>>`}
             </Button>
             </Box>
      </Box>
      <Box display="flex" justifyContent="center" alignItems="center"  mt="30px">
-     <Button color="black" backgroundColor="rgb(223, 223, 223)" direction='row' align='center' padding="1.8%">
+     <Button onClick={() => navigate('/arrival')} color="black" backgroundColor="rgb(223, 223, 223)" direction='row' align='center' padding="1.8%">
                 SHOP KIDS DESIGNERS
             </Button>
      </Box>
