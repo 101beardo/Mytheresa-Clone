@@ -2,7 +2,7 @@ import React from 'react'
 import {Box,Button,Text,Image, Heading} from '@chakra-ui/react'
 import { useSelector } from "react-redux";
 import {useEffect,useState} from "react";
-import {getdata } from '../Redux/AppReducer/action';
+import {addCartData, addWishData, getdata } from '../Redux/AppReducer/action';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from 'react-toastify';
@@ -17,13 +17,15 @@ const SinglePage=()=>{
     // const notifySuccess = (res)=>{toast.success(res)};
     // notifySuccess("Item deleted from Cart")
    useEffect(()=>{
-    dispatch(getdata)
+    dispatch(getdata())
+    console.log(data)
     },[])
 
    useEffect(()=>{
     if(id){
-        const product=data.find((item)=>item.id===Number(id))
-        product&&setCurrentProduct(product)
+          const product=data.find((item)=>item.id===Number(id))
+          product&&setCurrentProduct(product)
+           
     }
    },[id])
    console.log(currentProduct,"curr")
@@ -32,14 +34,27 @@ const SinglePage=()=>{
 //     alert("Item added in Cart")
 //     console.log(payload);
 //    }
+
+
+const handleCart=(payload)=>{
+  dispatch(addCartData(payload)) 
+  navigate(`/cart`)
+}
+
+const handleWish=(payload)=>{
+  dispatch(addWishData(payload)) 
+  navigate(`/wishlist`)
+}
+
+
   return (
     <>
      <Box display={["block","","flex","flex"]} pt="40px" w="75%" m="auto" mt="7%" border="px solid red">
        <Box w={["","100%","","50%"]} border="px solid red" m={["auto","auto","","none"]}>
           <Image border="px solid red" display="block" m="auto" src={currentProduct.lazyloaded} />
         <Box  display={["grid","","","flex"]} gap={["10px","","",""]} w="70%" m="auto" mt="20%" border="px solid red">
-       <Button  w={["115px","","","95%"]} fontSize={["16px","","","20px"]} border="1px solid black" _hover={{bgColor:'white'}} bgColor="white" >{`🛒`}Add To Cart</Button> 
-        <Button  w={["115px","","","50%"]} fontSize={["20px","","","20px"]}  bgColor="black" color="white" _hover={{bgColor:'black'}}>{`>>`}Buy Now</Button>
+       <Button  w={["115px","","","95%"]} fontSize={["16px","","","20px"]} border="1px solid black" _hover={{bgColor:'white'}} bgColor="white" onClick={()=>{handleWish(currentProduct)}} >{`>>`}Add To Wishlist</Button> 
+        <Button  w={["115px","","","50%"]} fontSize={["20px","","","20px"]}  bgColor="black" color="white" _hover={{bgColor:'black'}}  onClick={()=>{handleCart(currentProduct)}} >{`🛒`}Buy Now</Button>
         </Box>
         <Box  display={["flex","","","flex"]} gap="10px" justifyContent="center">
         <Image  w={["15%","","","10%"]} m="right" mt="5%" src={currentProduct.lazyloaded}/>

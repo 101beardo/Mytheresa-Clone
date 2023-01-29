@@ -52,7 +52,7 @@ import { useSelector } from "react-redux";
                 <SearchIcon boxSize="18px" pos="absolute"/>
                 <Input value={value} onChange={onChange} variant='unstyled'  placeholder='Search for...'/>    
                 <Button display="none" onClick={()=>onSearch(value)}></Button>
-                <Box mt="180px">
+                <Box mt="180px" zIndex={999} >
             {data.filter(item=>{
               const searchTerm=value.toLowerCase();
               const fullname=item.pa1.toLowerCase();
@@ -63,7 +63,6 @@ import { useSelector } from "react-redux";
               (
                <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/product/${item.id}`)}}>
                 <Box  
-                
                 onClick={()=>onSearch(item.pa1)} 
                 bgColor="white"
                 className='dropdown-row' 
