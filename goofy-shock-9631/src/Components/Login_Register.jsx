@@ -25,7 +25,7 @@ const LoginRegister = () => {
     try{
         await login(emailRef.current.value,passwordRef.current.value)
         alert("Login Succesful")
-        usenavigate("/adminpannel");
+        usenavigate("/womens");
 
     }catch(error){
         setuserNotFount(true)

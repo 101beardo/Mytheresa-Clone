@@ -1,4 +1,10 @@
 import { Box, Button, Input, Text } from '@chakra-ui/react'
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -8,27 +14,51 @@ const Add = () => {
     const navigate=useNavigate()
     const dispatch=useDispatch()
 
-    const [image,setImage]=useState("")
+    const [lazyloaded,setLazyloaded]=useState("")
+    const [pa1,setPa1]=useState("")
+    const [category,setCategory]=useState("")
+    const [price,setPrice]=useState("")
+    const [productbutton,setProductbutton]=useState("")
 
 
     const submitHandler=(e)=>{
         e.preventDefault()
-        if(image){
+        const payload={lazyloaded,pa1,category,price,productbutton}
+        if(payload){
 
-            dispatch(addData({image:image}))
-            .then(()=>navigate('/arrival'))
+            dispatch(addData(payload))
+            .then(()=>navigate('/admin'))
         }
 
     }
 
     
   return (
-    <div  align="center" w="50%" >
+    <Box align="center" >
        <form onSubmit={submitHandler} >
-        <input style={{border:"1px solid black"}} value={image} placeholder="add image here" onChange={(e)=>setImage(e.target.value)} />
-        <Button  type="submit" >Add Product</Button>
+        <Box m="10px" >
+        <lable>Add Image URl here : </lable>
+        <input  style={{border:"1px solid black"}} value={lazyloaded} placeholder="add image here" onChange={(e)=>setLazyloaded(e.target.value)} />
+        </Box>
+        <Box m="10px">
+        <label>Add Product Title here : </label>
+        <input  style={{border:"1px solid black"}} value={pa1} placeholder="add title here" onChange={(e)=>setPa1(e.target.value)} />
+        </Box>
+        <Box m="10px">
+        <label>Add Product Category here : </label>
+        <input  style={{border:"1px solid black"}} value={category} placeholder="add category here" onChange={(e)=>setCategory(e.target.value)} />
+        </Box>
+        <Box m="10px">
+        <label>Add Product Price here : </label>
+        <input  style={{border:"1px solid black"}} value={price} placeholder="add price here" onChange={(e)=>setPrice(e.target.value)} />
+        </Box>
+        <Box m="10px">
+        <label>Add Product Season here : </label>
+        <input  style={{border:"1px solid black"}} value={productbutton} placeholder="add NEW Season here" onChange={(e)=>setProductbutton(e.target.value)} />
+        </Box>
+        <Button fontSize={["20px","","","20px"]}  bgColor="black" color="white" _hover={{bgColor:'black'}} m="10px" type="submit">Add Product</Button>
        </form>
-    </div>
+    </Box>
   )
 }
 
