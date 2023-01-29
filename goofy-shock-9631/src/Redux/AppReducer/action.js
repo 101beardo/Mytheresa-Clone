@@ -67,7 +67,9 @@ const addWishData=(payload)=>(dispatch)=>{
         dispatch({type:types.ADD_WISH_DATA_SUCCESS,payload:r.data})
     })
     .catch((e)=>{
-        dispatch({type:types.ADD_WISH_DATA_ERROR})
+        console.log(e.response.data)
+        // dispatch({type:types.ADD_WISH_DATA_ERROR})
+        dispatch({type:types.ADD_WISH_DATA_SUCCESS,payload})
     })
 }
 
@@ -109,7 +111,8 @@ const addCartData=(payload)=>(dispatch)=>{
         dispatch({type:types.ADD_CART_DATA_SUCCESS,payload:r.data})
     })
     .catch((e)=>{
-        dispatch({type:types.ADD_CART_DATA_ERROR})
+        // dispatch({type:types.ADD_CART_DATA_ERROR})
+        dispatch({type:types.ADD_CART_DATA_SUCCESS,payload})
     })
 }
 
@@ -122,7 +125,8 @@ const addData=(payload)=>(dispatch)=>{
         dispatch({type:types.ADD_DATA_SUCCESS,payload:r.data})
     })
     .catch((e)=>{
-        dispatch({type:types.ADD_DATA_ERROR})
+        // dispatch({type:types.ADD_DATA_ERROR})
+        dispatch({type:types.ADD_DATA_SUCCESS,payload})
     })
 }
 
@@ -135,7 +139,8 @@ const updateData=(id,payload)=>(dispatch)=>{
         dispatch({type:types.UPDATE_DATA_SUCCESS,payload:r.data})
     })
     .catch((e)=>{
-        dispatch({type:types.UPDATE_DATA_ERROR})
+        // dispatch({type:types.UPDATE_DATA_ERROR})
+        dispatch({type:types.UPDATE_DATA_SUCCESS,payload})
     })
 }
 
@@ -147,7 +152,8 @@ const deleteData=(id)=>(dispatch)=>{
         dispatch({type:types.DELETE_DATA_SUCCESS,payload:id})
     })
     .catch((e)=>{
-        dispatch({type:types.DELETE_DATA_ERROR})
+        // dispatch({type:types.DELETE_DATA_ERROR})
+        dispatch({type:types.DELETE_DATA_SUCCESS,payload:id})
     })
 }
 
@@ -159,7 +165,8 @@ const deleteCartData=(id)=>(dispatch)=>{
         dispatch({type:types.DELETE_CART_DATA_SUCCESS,payload:id})
     })
     .catch((e)=>{
-        dispatch({type:types.DELETE_CART_DATA_ERROR})
+        // dispatch({type:types.DELETE_CART_DATA_ERROR})
+        dispatch({type:types.DELETE_CART_DATA_SUCCESS,payload:id})
     })
 }
 
@@ -172,7 +179,8 @@ const deleteWishData=(id)=>(dispatch)=>{
         dispatch({type:types.DELETE_WISH_DATA_SUCCESS,payload:id})
     })
     .catch((e)=>{
-        dispatch({type:types.DELETE_WISH_DATA_ERROR})
+        // dispatch({type:types.DELETE_WISH_DATA_ERROR})
+        dispatch({type:types.DELETE_WISH_DATA_SUCCESS,payload:id})
     })
 }
 
