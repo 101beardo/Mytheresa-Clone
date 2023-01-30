@@ -17,9 +17,9 @@ const getDataError=()=>{
     }
 }
 
-const getdata=()=>(dispatch)=>{
+const getdata=(params)=>(dispatch)=>{
     dispatch(getDataRequest());
-    return axios.get('https://jsondeployment-lyna.vercel.app/mens')
+    return axios.get('https://jsondeployment-lyna.vercel.app/mens',params)
     .then((res)=>dispatch(getDataSuccess(res.data)))
     .catch((error)=>{
         dispatch(getDataError(error))

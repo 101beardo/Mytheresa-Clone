@@ -50,29 +50,30 @@ import { useSelector } from "react-redux";
       
                 <Box fontSize={['12px']} mr="60px" p="10px"  w="18%" display="flex" justifyContent="right" alignItems="center" border="1px solid lightgray" >
                 <SearchIcon boxSize="18px" pos="absolute"/>
-                <Input value={value} onChange={onChange} variant='unstyled'  placeholder='Search for...'/>    
+                <Input value={value} onChange={onChange} variant='unstyled'  placeholder=''/>    
                 <Button display="none" onClick={()=>onSearch(value)}></Button>
-                <Box mt="180px" zIndex={999} >
+                <Box mt="180px" zIndex={999}>
             {data.filter(item=>{
               const searchTerm=value.toLowerCase();
               const fullname=item.pa1.toLowerCase();
               return searchTerm && fullname.startsWith(searchTerm) &&
               fullname!==searchTerm
-            }).slice(0,5)
+            }).slice(0,2)
             .map((item)=>(
               (
                <Link style={{ textDecoration: 'none' }}  onClick={()=>{navigate(`/product/${item.id}`)}}>
                 <Box  
+                
                 onClick={()=>onSearch(item.pa1)} 
                 bgColor="white"
                 className='dropdown-row' 
                 cursor='pointer'
                 textAlign='start'
-                margin="2px 0"
+                 margin="2px 0"
                 key={item.price}>
                   {item.pa1}
                  <Box>
-                  <Image bgColor="grey" width="20%" src={item.lazyloaded}/>
+                  <Image  bgColor="grey" width="20%" src={item.lazyloaded}/>
                  </Box>
                 </Box>
                 </Link> 
