@@ -1,7 +1,8 @@
 
-import { GET_DATA, LOGOUT } from "../AuthReducer/actionTypes";
+import { GET_DATA, LOGOUT, ADMIN } from "../AuthReducer/actionTypes";
 import { FILTER_DATA } from '../AuthReducer/actionTypes'
 import { USER_EMAIL} from '../AuthReducer/actionTypes';
+
 
 const initState = {
     pages : [],
@@ -39,11 +40,19 @@ const reducer = ( store = initState , {type , payload}) =>{
                     isAuth:true,
                  }
         }
+        case ADMIN : {
+            return { ...store , 
+                email : payload,
+                isAdmin:true,
+                isAuth:true,
+             }
+        }
          case LOGOUT:{
             return{
                 ...store,
                 email:payload,
                 isAuth:false,
+                isAdmin:false,
             }
          }   
         default:
