@@ -7,7 +7,7 @@ Mytheresa is the finest edit in luxury fashion for women, men and kids. We have 
  <h1>Entirely responsive website</h1>
  <h2>Netlify Link</h2>https://luminous-swan-cc6644.netlify.app/<br/>
  
-<h3>Working Feautres :-</h3>
+Working Feautres :-
 - Entirely responsive Kids Page
 - Entirely responsive Life Page
 - Entirely responsive Men Page
@@ -27,7 +27,7 @@ Mytheresa is the finest edit in luxury fashion for women, men and kids. We have 
 - Deleting the product form the backend data through admin panel
 
 
-<h3>Tech Stack :- </h3>
+Tech Stack :-
 - React
 - Redux
 - Firebase
@@ -36,13 +36,14 @@ Mytheresa is the finest edit in luxury fashion for women, men and kids. We have 
 - External Css
 - For backend-server deployment we have used Vercel.
 
-<h3>Steps to start :-</h3>
+
+Steps to start :-
 - npm install 
 - npm run server for running sever in localhost at port 8080
 - npm run start
 Now site is infront of you
 
-<h3>Team Members :-</h3>
+Team Members :-
 - Tarun Sharma
 - Shiv Pratap Singh Yada
 - Shubham Patel
@@ -50,21 +51,25 @@ Now site is infront of you
 
 <h4>HOMEPAGE :-</h4>
 Here is the homepage which is entirely responsive and is made by using Chakra UI
+
 ![Homepage](https://user-images.githubusercontent.com/76995063/215413474-5d5820d4-bf83-4a7c-8b95-25b95995829b.png)
 
 
 <h4>Men Page :-</h4>
 Here is the Men page which is entirely responsive and is made by using Chakra UI
+
 ![men](https://user-images.githubusercontent.com/76995063/215414405-da66dc47-aa0f-4d1d-aa5f-6f02899a34fc.png)
 
 
 <h4>Kids Page :-</h4>
 Here is the Kids page which is entirely responsive and is made by using Chakra UI
+
 ![kids](https://user-images.githubusercontent.com/76995063/215414435-e8d185bd-fe03-440c-8559-4edff2e71c64.png)
 
 
 <h4>Life Page :-</h4>
 Here is the Life page which is entirely responsive and is made by using Chakra UI
+
 ![life](https://user-images.githubusercontent.com/76995063/215414790-012b0e40-1d53-4d61-b08e-ebc73757800c.png)
 
 <h4>All Products Page :-</h4>
