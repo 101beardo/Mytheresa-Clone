@@ -50,7 +50,7 @@ function Arrival() {
         _page:page
         }
       }
-    
+    console.log('data',getProductParams);
     dispatch(getdata(getProductParams))
     }
   },[location.search,setSearchParams,sort,page])

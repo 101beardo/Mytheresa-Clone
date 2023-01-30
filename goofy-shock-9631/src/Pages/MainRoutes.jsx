@@ -15,6 +15,8 @@ import LoginRegister from '../Components/Login_Register'
 import Cart from './Cart'
 import Add from './Add'
 import SinglePage from './SinglePage';
+import Checkout from './Checkout'
+import Edit from '../Components/Edit'
 
 const MainRoutes = () => {
   return (
@@ -34,7 +36,9 @@ const MainRoutes = () => {
         <Route path='/womens' element={<WomenPage/>}/>
         <Route path='/life' element={<Life/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/add' element={<Add/>}/>
+        <Route path='/edit/:id' element={<Edit/>}/>
       </Routes>
       <Footer/>
     </div>
