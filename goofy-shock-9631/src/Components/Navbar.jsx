@@ -3,21 +3,26 @@ import { Box, Link, useDisclosure,Button, Collapse, Icon, Image, useColorModeVal
 import {GiHamburgerMenu} from "react-icons/gi"
 import {CgClose} from "react-icons/cg"
 import { useNavigate } from 'react-router'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { store } from '../Redux/store'
 import { AiOutlineUser } from 'react-icons/ai'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
+import { logout } from '../Redux/AuthReducer/action'
 
 
 
 
 const Navbar = () => {
   const isAuth=useSelector(store=>store.AuthReducer.isAuth)
+  const isAdmin=useSelector(store=>store.AuthReducer.isAdmin)
   // console.log(isAuth)
      // border="1px solid red"
-     
+  const dispatch=useDispatch();
   const { isOpen, onToggle } = useDisclosure()
   const navigate=useNavigate()
+  const handlelogout=()=>{
+    dispatch(logout())
+  }
 
   return (
    <Box mb="50px"   align="center" >
@@ -44,7 +49,8 @@ const Navbar = () => {
                 <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/wishlist`)}}>My wishlist</Link>
 
                 <Link style={{ textDecoration: 'none' }}  href='#'>Malaysia | English</Link>
-                {isAuth ? <Box display="flex" > <Link mr="10px" style={{ textDecoration: 'none' }}  onClick={() => {}} >Logout</Link> <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/admin`)}}><Icon as={AiOutlineUser}/>  </Link></Box> : <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/login`)}}>Login</Link>}
+                {isAuth ? <Box display="flex" > <Link mr="10px" style={{ textDecoration: 'none' }}  onClick={() => {handlelogout()}} >Logout</Link> </Box> : <Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/login`)}}>Login</Link>}
+                {isAuth && isAdmin ? <Box display="flex" ><Link style={{ textDecoration: 'none' }}  onClick={() => {navigate(`/admin`)}}><Icon as={AiOutlineUser}/>  </Link></Box> : null}
           </Box>
           </Box>
         <Box w="100%" 
@@ -94,7 +100,7 @@ const Navbar = () => {
       
       <Box w={["90%"]}>
         <Box onClick={()=>{navigate(`/cart`)}} style={{cursor:"pointer"}} ml="89%" display={"flex"} >
-          <Text mt="6%" >Shopping Bag</Text>
+          <Text fontSize={"13px"} mt="6%" >Shopping Bag</Text>
           <Icon boxSize={["40px"]} as={HiOutlineShoppingBag}/>
         </Box>
       </Box>

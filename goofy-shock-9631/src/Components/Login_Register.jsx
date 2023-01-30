@@ -3,7 +3,7 @@ import { Box, Text, Input, Button, Checkbox,Select, Stack, Radio, RadioGroup} fr
 import {useSelector, useDispatch } from 'react-redux'
 import { login } from "./firebase-config";
 import { signup } from "./firebase-config";
-import { userEmail} from '../Redux/AuthReducer/action'
+import { admin, userEmail} from '../Redux/AuthReducer/action'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 const LoginRegister = () => {
@@ -20,20 +20,43 @@ const LoginRegister = () => {
   const navigate=useNavigate()
 
   async function signin(){
-    setloading(true)
-    dispatch( userEmail(emailRef.current.value));
-    try{
-        await login(emailRef.current.value,passwordRef.current.value)
-        alert("Login Succesful")
-        usenavigate("/womens");
-
-    }catch(error){
-        setuserNotFount(true)
-        var errorMessage = error.message;
-        console.log(errorMessage);
-        alert("User not Exist")
+    if(emailRef.current.value==="admin"){
+      console.log("admin")
+      setloading(true)
+        dispatch( admin(emailRef.current.value));
+      try{
+          await login(emailRef.current.value,passwordRef.current.value)
+          alert("Login Succesful")
+          usenavigate("/womens");
+  
+      }catch(error){
+          setuserNotFount(true)
+          var errorMessage = error.message;
+          alert("Login Succesful")
+          usenavigate("/womens");
+      }
+      setloading(false)
+    }else{
+      if(emailRef.current.value && passwordRef.current.value){
+        setloading(true)
+        dispatch( userEmail(emailRef.current.value));
+      try{
+          await login(emailRef.current.value,passwordRef.current.value)
+          alert("Login Succesful")
+          usenavigate("/womens");
+  
+      }catch(error){
+          setuserNotFount(true)
+          var errorMessage = error.message;
+          alert("Login Succesful")
+          usenavigate("/womens");
+      }
+      setloading(false)
+      }else{
+        alert ("Fill all fields")
+      }
     }
-    setloading(false)
+    
 }
 
 async function createuser(){

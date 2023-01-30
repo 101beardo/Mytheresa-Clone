@@ -1,4 +1,4 @@
-import { GET_DATA, LOGOUT, USER_EMAIL} from '../AuthReducer/actionTypes';
+import { GET_DATA, LOGOUT, USER_EMAIL, ADMIN} from '../AuthReducer/actionTypes';
 import { FILTER_DATA } from '../AuthReducer/actionTypes'
 
 
@@ -22,4 +22,12 @@ export const userEmail = (payload) =>{
         payload : payload
     }
 }
+
+export const admin = (payload) =>{
+    return {
+        type : ADMIN,
+        payload : payload
+    }
+}
+
 export const logout = () => ({ type: LOGOUT });
