@@ -37,14 +37,14 @@ import { useSelector } from "react-redux";
           
           >
           <Box  w="59%" display="flex" justifyContent="space-evenly" >
-                <Link color="gray" style={{ textDecoration: 'none' }}   onClick={()=>{navigate(`/arrival`)}}>NEW ARRIVALS</Link>
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#mens">DESIGNERS</Link>
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">CLOTHING</Link>
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">SHOES</Link>
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">BAGS</Link>
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">ACCESSORIES</Link>
-                <Link color="gray" style={{ textDecoration: 'none' }}  href="#">FESTIVE SEASON</Link>
-                <Link color="red" style={{ textDecoration: 'none' }}  href="#">SALE</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}   onClick={()=>{navigate(`/arrival`)}}>NEW ARRIVALS</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#mens">DESIGNERS</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#">CLOTHING</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#">SHOES</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#">BAGS</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#">ACCESSORIES</Link>
+                <Link color="gray" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#">FESTIVE SEASON</Link>
+                <Link color="red" fontSize={['8px','9px','15px']} style={{ textDecoration: 'none' }}  href="#">SALE</Link>
           </Box>
           
       

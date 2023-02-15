@@ -1322,8 +1322,28 @@
     }
   ],
   "bag": [
-   
+    {
+      "id": 60,
+      "productbutton": "NEW SEASON",
+      "product-image href": "https://www.mytheresa.com/int_en/thom-browne-technical-jacket-2515552.html?departmentgroup=MENSWEAR&catref=category",
+      "lazyloaded": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/82/P00734350.jpg",
+      "category": "Thom Browne",
+      "pa1": "Technical jacket",
+      "price": 170,
+      "availability": "available sizes",
+      "available-size": "_ 003XS",
+      "availabe-size": "_ 0XS",
+      "available-size 3": "_ 1S",
+      "available-size 4": "_ 2M",
+      "available-size 5": "_ 3L",
+      "available-size 6": "_ 4XL",
+      "choose-size": "Please choose your size:",
+      "available-sizes 4": "_ 2M",
+      "available-sizes 5": "_ 3L",
+      "available-sizes 6": "_ 4XL",
+      "available-size 7": "_ 5XXL",
+      "available-sizes 7": "_ 5XXL"
+    }
   ],
-  "wish": [
-  ]
+  "wish": []
 }

@@ -28,7 +28,7 @@ const SinglePage=()=>{
            
     }
    },[id])
-   console.log(currentProduct,"curr")
+  //  console.log(currentProduct,"curr")
 //    const handleCart=(payload)=>{
 //     dispatch(addCartData(payload))
 //     alert("Item added in Cart")
@@ -53,8 +53,8 @@ const handleWish=(payload)=>{
        <Box w={["","100%","","50%"]} border="px solid red" m={["auto","auto","","none"]}>
           <Image border="px solid red" display="block" m="auto" src={currentProduct.lazyloaded} />
         <Box  display={["grid","","","flex"]} gap={["10px","","",""]} w="70%" m="auto" mt="20%" border="px solid red">
-       <Button  w={["115px","","","95%"]} fontSize={["16px","","","20px"]} border="1px solid black" _hover={{bgColor:'white'}} bgColor="white" onClick={()=>{handleWish(currentProduct)}} >{`>>`}Add To Wishlist</Button> 
-        <Button  w={["115px","","","50%"]} fontSize={["20px","","","20px"]}  bgColor="black" color="white" _hover={{bgColor:'black'}}  onClick={()=>{handleCart(currentProduct)}} >{`🛒`}Buy Now</Button>
+       <Button  w={["115px","","","95%"]} fontSize={['8px','10px','15px']} border="1px solid black" _hover={{bgColor:'white'}} bgColor="white" onClick={()=>{handleWish(currentProduct)}} >{`>>`}Add To Wishlist</Button> 
+        <Button  w={["115px","","","50%"]} fontSize={['8px','10px','15px']}  bgColor="black" color="white" _hover={{bgColor:'black'}}  onClick={()=>{handleCart(currentProduct)}} >{`🛒`}Buy Now</Button>
         </Box>
         <Box  display={["flex","","","flex"]} gap="10px" justifyContent="center">
         <Image  w={["15%","","","10%"]} m="right" mt="5%" src={currentProduct.lazyloaded}/>

@@ -98,10 +98,10 @@ const Navbar = () => {
       
 
       
-      <Box w={["90%"]}>
-        <Box onClick={()=>{navigate(`/cart`)}} style={{cursor:"pointer"}} ml="89%" display={"flex"} >
-          <Text fontSize={"13px"} mt="6%" >Shopping Bag</Text>
-          <Icon boxSize={["40px"]} as={HiOutlineShoppingBag}/>
+      <Box >
+        <Box pos={"relative"} left="80%" onClick={()=>{navigate(`/cart`)}}  style={{cursor:"pointer"}} display={"flex"} >
+          <Text fontSize={['8px','10px','15px']} mt="0.5%" >Shopping Bag</Text>
+          <Icon boxSize={["20px","30px","40px"]}  as={HiOutlineShoppingBag}/>
         </Box>
       </Box>
       
